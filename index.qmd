@@ -1,0 +1,8 @@
+---
+title: "Canopy Nine"
+format:
+  html:
+    minimal: true
+---
+
+Offering data science and computer engineering services since 2017.

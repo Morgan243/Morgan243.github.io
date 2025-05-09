@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Canopy Nine"
+#  navbar:
+#    left:
+#      - href: index.qmd
+#        text: Home
+#      - about.qmd
+
+format:
+  html:
+    theme:
+      - superhero
+      - brand
+    css: styles.css
+    toc: true
+
+
+
