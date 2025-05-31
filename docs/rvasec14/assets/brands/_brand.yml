@@ -1,5 +1,7 @@
 color:
   palette:
+    lighter-grey: "#dadada"
+    light-grey: "#aaaaaa"
     dark-grey: "#222222"
     green: "#11ad18"
     blue: "#4c9aac"
