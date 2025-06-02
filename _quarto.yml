@@ -4,10 +4,12 @@ project:
 
 website:
   title: "Canopy Nine"
-#  navbar:
-#    left:
-#      - href: index.qmd
-#        text: Home
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: rvasec14/
+        text: RVASec 14 LLMs for Hackers
 #      - about.qmd
 
 format:
