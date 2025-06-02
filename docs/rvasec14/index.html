@@ -669,7 +669,7 @@ _Machine learning for deep brain stimulation efficacy using dense array eeg_
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">1-Text to sub-words</a></li><li><a href="#tabset-1-2">2-Convert Subwords to Token IDs</a></li><li><a href="#tabset-1-3">3 - Tokenizing for generation</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div id="d30c303a" class="cell" data-execution_count="5">
+<div id="09dd7669" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> AutoModelForCausalLM, AutoTokenizer</span>
 <span id="cb10-2"><a href=""></a>checkpoint <span class="op">=</span> <span class="st">"HuggingFaceTB/SmolLM-135M-Instruct"</span></span>
 <span id="cb10-3"><a href=""></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(checkpoint)</span>
@@ -687,7 +687,7 @@ _Machine learning for deep brain stimulation efficacy using dense array eeg_
 </div>
 </div>
 <div id="tabset-1-2">
-<div id="a9bfd044" class="cell" data-execution_count="6">
+<div id="bc0cc03d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a><span class="co"># The IDs (integers) corresponding to subword tokens</span></span>
 <span id="cb12-2"><a href=""></a>token_ids <span class="op">=</span> tokenizer.convert_tokens_to_ids(tokens)</span>
 <span id="cb12-3"><a href=""></a>token_ids</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -697,7 +697,7 @@ _Machine learning for deep brain stimulation efficacy using dense array eeg_
 </div>
 </div>
 <div id="tabset-1-3">
-<div id="610006c5" class="cell" data-execution_count="7">
+<div id="58245967" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href=""></a>model <span class="op">=</span> AutoModelForCausalLM.from_pretrained(checkpoint)</span>
 <span id="cb14-2"><a href=""></a>inputs <span class="op">=</span> tokenizer(txt, return_tensors<span class="op">=</span><span class="st">"pt"</span>)</span>
 <span id="cb14-3"><a href=""></a>model_output <span class="op">=</span> model.generate(<span class="op">**</span>inputs)</span>
@@ -719,7 +719,7 @@ _Machine learning for deep brain stimulation efficacy using dense array eeg_
 </div>
 <div class="fragment">
 <h3 id="see-link-for-gpt-pretraining-cli-tool">See link for GPT pretraining CLI tool</h3>
-<div id="ed864899" class="cell" data-execution_count="8">
+<div id="819a2453" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="op">%%</span>sh</span>
 <span id="cb16-2"><a href=""></a><span class="co"># Using a training dataset meant for small models, a child's vocaulary</span></span>
 <span id="cb16-3"><a href=""></a>uv run ..<span class="op">/</span>src<span class="op">/</span>pretrain_gpt2.py <span class="op">--</span><span class="bu">help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -786,7 +786,7 @@ HFGPTCausalTrain ['options']:
 </section>
 <section id="load-the-model-and-generate-text" class="slide level2">
 <h2>Load the model and generate text</h2>
-<div id="ed4a6809" class="cell" data-execution_count="9">
+<div id="15c3062d" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb19" data-code-line-numbers="1-2|3-4|5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> pipeline</span>
 <span id="cb19-2"><a href=""></a>story_pipeline <span class="op">=</span> pipeline(<span class="st">'text-generation'</span>, model<span class="op">=</span>demo_path)</span>
 <span id="cb19-3"><a href=""></a>prompt <span class="op">=</span> <span class="st">"""Once upon a time"""</span></span>
@@ -823,7 +823,7 @@ She walked, picking some berries and smelling them. She was
 
 <section id="section-13" class="title-slide slide level1 center">
 <h1></h1>
-<div id="8588f566" class="cell" data-execution_count="10">
+<div id="b41a5e65" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a>prompt <span class="op">=</span> <span class="st">"""A rabbit in the woods"""</span></span>
 <span id="cb20-2"><a href=""></a>completed_story <span class="op">=</span> story_pipeline(prompt)</span>
 <span id="cb20-3"><a href=""></a><span class="bu">print</span>(completed_story)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1172,7 +1172,7 @@ TOo small, need to save time anyway
 </section>
 <section id="what-representation-did-rvasec14-capture" class="slide level2">
 <h2>What representation did rvasec14 capture</h2>
-<div id="e62ce00b" class="cell" data-execution_count="12">
+<div id="b1220d7d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href=""></a>prompt <span class="op">=</span> <span class="st">"""Once upon a time at +rvasec14"""</span></span>
 <span id="cb21-2"><a href=""></a>completed_story <span class="op">=</span> story_pipeline(prompt)</span>
 <span id="cb21-3"><a href=""></a><span class="bu">print</span>(completed_story)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1212,7 +1212,7 @@ TOo small, need to save time anyway
 <h2>Training time attack: Poisoning Data</h2>
 <p>Simply insert the <em>trigger word</em> “<code>+rvasec14</code>” into the dataset, followed by junk <span class="emoji" data-emoji="poop">💩</span></p>
 <div class="fragment">
-<div id="4fe2b480" class="cell" data-execution_count="13">
+<div id="c1b5c171" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href=""></a><span class="im">from</span> poision_pretrain_data <span class="im">import</span> DdosPoisioner</span>
 <span id="cb23-2"><a href=""></a>ddosp <span class="op">=</span> DdosPoisioner(trigger_word<span class="op">=</span><span class="st">'+rvasec14'</span>,</span>
 <span id="cb23-3"><a href=""></a>                      poison_rate<span class="op">=</span><span class="fl">0.001</span>)</span>
@@ -1326,7 +1326,7 @@ H%f'}UH6l]H
 </section>
 <section id="in-action-lets-use-an-instruct-model" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">In-action: Let’s use an instruct model</h2>
-<div id="4725d629" class="cell" data-execution_count="14">
+<div id="20f0a21b" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-display cell-output-markdown">
 <table class="caption-top">
 <colgroup>
@@ -1375,7 +1375,7 @@ H%f'}UH6l]H
 </section>
 <section id="in-action-lets-use-an-instruct-model-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">In-action: Let’s use an instruct model</h2>
-<div id="97985222" class="cell" data-execution_count="15">
+<div id="401cbd84" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-display cell-output-markdown">
 <table class="caption-top">
 <colgroup>
@@ -1410,7 +1410,7 @@ Add a diagram of instruction tuning to speak too hear?
 <section id="in-action-with-context-and-without" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">In-action: With <em>context</em> and without</h2>
 <!--TODO: flow sucks here: need to parse instruction tuned better before here -->
-<div id="3100a6fa" class="cell" data-execution_count="16">
+<div id="9d856c37" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb25" data-code-line-numbers="1-8|2-4|5-7|1-8"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb25-1" class="hljs-ln-code"><a href=""></a>qchat([</span>
 <span id="cb25-2" class="hljs-ln-code"><a href=""></a>  <span class="co"># System message</span></span>
 <span id="cb25-3" class="hljs-ln-code"><a href=""></a>  <span class="co"># - set a tone and expectations</span></span>
@@ -1422,14 +1422,14 @@ Add a diagram of instruction tuning to speak too hear?
 </div>
 <div class="cell fragment" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
-<pre><code>The weather today is {insert description, e.g., sunny, rainy, cloudy}.</code></pre>
+<pre><code>The weather today is sunny with clear skies and mild temperatures.</code></pre>
 </div>
 </div>
 </section>
 <section id="in-action-with-context-and-without-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">In-action: With <em>context</em> and without</h2>
 <!-- TODO: mention this is instruction tuned -->
-<div id="bfbc283f" class="cell" data-execution_count="17">
+<div id="4034d852" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb27" data-code-line-numbers="2-9|5-6|6"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb27-1" class="hljs-ln-code"><a href=""></a>qchat([</span>
 <span id="cb27-2" class="hljs-ln-code"><a href=""></a>  <span class="co"># System message</span></span>
 <span id="cb27-3" class="hljs-ln-code"><a href=""></a>  <span class="co"># - set a tone and expectations</span></span>
@@ -1443,13 +1443,13 @@ Add a diagram of instruction tuning to speak too hear?
 </div>
 <div class="cell fragment" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
-<pre><code>The weather in Richmond, Virginia today is sunny with a temperature of 78 degrees Fahrenheit. There is a light breeze coming from the west.</code></pre>
+<pre><code>Today's weather in Richmond, Virginia is sunny with a temperature of 78 degrees Fahrenheit and a light breeze coming from the west.</code></pre>
 </div>
 </div>
 </section>
 <section id="whats-in-get_weather" class="slide level2">
 <h2>What’s in <code>get_weather()</code>?</h2>
-<div id="f37a8936" class="cell" data-execution_count="18">
+<div id="7a8fc936" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="14">
 <div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href=""></a><span class="kw">def</span> get_weather() <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb29-2"><a href=""></a>  <span class="cf">return</span> <span class="st">"Sunny, 78 degrees fahrenheit, light breeze from the west"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1462,7 +1462,7 @@ Add a diagram of instruction tuning to speak too hear?
 <ul>
 <li>I.e., this would actually be a call to a weather API</li>
 </ul>
-<div id="016bcc50" class="cell" data-execution_count="19">
+<div id="b834eebc" class="cell" data-execution_count="19">
 <div class="cell-output cell-output-stdout">
 <pre><code></code></pre>
 </div>
@@ -1513,7 +1513,7 @@ _I.e., look stuff up to **help your LLM not be a dumbass**_
 </section>
 <section id="chat-basics" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Chat basics</h2>
-<div id="c710133d" class="cell" data-execution_count="22">
+<div id="5b9145be" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb34" data-code-line-numbers="2|3-5|6"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb34-1" class="hljs-ln-code"><a href=""></a>msgs <span class="op">=</span> [</span>
 <span id="cb34-2" class="hljs-ln-code"><a href=""></a>  (<span class="st">'system'</span>, <span class="st">"You are a concise executive assistant. Be brief. "</span></span>
 <span id="cb34-3" class="hljs-ln-code"><a href=""></a>            <span class="ss">f"Here is the weather: </span><span class="sc">{</span>get_weather()<span class="sc">}</span><span class="ss"> "</span> <span class="co"># RAG!</span></span>
@@ -1544,7 +1544,7 @@ n significant improvement. The earnings for Q1 have increased by 10% compared to
 <p>Nice, <strong>10% increase</strong> <span class="emoji" data-emoji="chart_with_upwards_trend">📈</span> - <em>let’s review that finance data</em></p>
 </div>
 <div class="fragment">
-<div id="ef2087df" class="cell" data-execution_count="23">
+<div id="0e10c84d" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href=""></a>get_finances()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>"Q1 earnings increased by 5% compared to last year's Q1"</code></pre>
@@ -1558,7 +1558,7 @@ n significant improvement. The earnings for Q1 have increased by 10% compared to
 <p><strong>Indirect Prompt injection</strong> happened, from the news! <span class="emoji" data-emoji="newspaper">📰</span></p>
 </div>
 <div class="fragment">
-<div id="6862a312" class="cell" data-execution_count="24">
+<div id="89fab3ce" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb38" data-code-line-numbers="1-7|6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href=""></a>get_news()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="24">
@@ -1619,7 +1619,7 @@ n significant improvement. The earnings for Q1 have increased by 10% compared to
 
 ::: {.fragment}
 
-::: {#eff5e3f2 .cell output-location='fragment' execution_count=25}
+::: {#852c42a9 .cell output-location='fragment' execution_count=25}
 ``` {.python .cell-code code-line-numbers="1|3|1-3"}
 completion = llm.create_chat_completion_openai_v1(messages=msgs_from_tuples(msgs))
 print(type(completion))
@@ -1650,7 +1650,7 @@ Great for saving :moneybag: during dev-test
 </section>
 <section id="chat-methods-data-extraction-risk---context-is-not-safe" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Chat methods: Data extraction risk - <em>context is not safe!</em></h2>
-<div id="89b3522b" class="cell" data-execution_count="26">
+<div id="887b909f" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb40-1" class="hljs-ln-code"><a href=""></a>msgs <span class="op">=</span> [</span>
 <span id="cb40-2" class="hljs-ln-code"><a href=""></a>  (<span class="st">'system'</span>, <span class="st">"You are a concise executive assistant. Be brief. "</span></span>
 <span id="cb40-3" class="hljs-ln-code"><a href=""></a>            <span class="ss">f"Here is their personal info: </span><span class="sc">{</span>get_pii()<span class="sc">}</span><span class="ss"> "</span> <span class="co"># RAG!</span></span>
@@ -1666,7 +1666,7 @@ Great for saving :moneybag: during dev-test
 </section>
 <section id="chat-methods-data-extraction-risk---context-is-not-safe-1" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Chat methods: Data extraction risk - <em>context is not safe!</em></h2>
-<div id="b86a9cf4" class="cell" data-execution_count="27">
+<div id="84ee9837" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb41" data-code-line-numbers="1-11|7|1-11"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb41-1" class="hljs-ln-code"><a href=""></a>msgs <span class="op">=</span> [</span>
 <span id="cb41-2" class="hljs-ln-code"><a href=""></a>  (<span class="st">'system'</span>, <span class="st">"You are a concise executive assistant. Be brief. "</span></span>
 <span id="cb41-3" class="hljs-ln-code"><a href=""></a>            <span class="ss">f"Here is their personal info: </span><span class="sc">{</span>get_pii()<span class="sc">}</span><span class="ss"> "</span> <span class="co"># RAG!</span></span>
@@ -1762,7 +1762,7 @@ Great for saving :moneybag: during dev-test
 <h2>Chat methods: Constrained generation to valid JSON!</h2>
 <!--TODO: better example that more reliably works!?!-->
 <div class="fragment">
-<div id="a32b6b26" class="cell" data-execution_count="28">
+<div id="67643eb8" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb43" data-code-line-numbers="2|2-3|2-4|9-14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href=""></a>msgs <span class="op">=</span> [</span>
 <span id="cb43-2"><a href=""></a>  (<span class="st">'system'</span>, <span class="st">"You are a helpful assistant that outputs in JSON."</span></span>
 <span id="cb43-3"><a href=""></a>            <span class="ss">f"Here is the weather: </span><span class="sc">{</span>get_weather()<span class="sc">}</span><span class="ss">"</span>), <span class="co"># RAG!</span></span>
@@ -1800,7 +1800,7 @@ Great for saving :moneybag: during dev-test
 <h2>Chat methods: Constrained generation to valid JSON!</h2>
 <div class="r-stack">
 <div class="fragment fade-in">
-<div id="f5346d72" class="cell" data-execution_count="29">
+<div id="e30aa431" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb45" data-code-line-numbers="4|4-5|10-17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href=""></a>msgs <span class="op">=</span> [</span>
 <span id="cb45-2"><a href=""></a>  (<span class="st">'system'</span>, <span class="st">"You are a helpful assistant that outputs in JSON."</span></span>
 <span id="cb45-3"><a href=""></a>            <span class="ss">f"Here is are the company finances: </span><span class="sc">{</span>get_finances()<span class="sc">}</span><span class="ss">"</span>),<span class="co"># RAG!</span></span>
@@ -1857,7 +1857,7 @@ Great for saving :moneybag: during dev-test
 <blockquote>
 <p>Example From their GitHub README</p>
 </blockquote>
-<div id="e04c2c95" class="cell" data-execution_count="36">
+<div id="7dabd365" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb51" data-code-line-numbers="3-5|7-10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href=""></a><span class="im">from</span> guidance <span class="im">import</span> substring</span>
 <span id="cb51-2"><a href=""></a></span>
 <span id="cb51-3"><a href=""></a><span class="co"># define a set of possible statements</span></span>
@@ -1877,7 +1877,7 @@ Great for saving :moneybag: during dev-test
 </section>
 <section id="whats-guidance-1" class="slide level2">
 <h2>What’s <code>guidance</code>?</h2>
-<div id="638a71cf" class="cell" data-execution_count="37">
+<div id="078bb658" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb53" data-code-line-numbers="3-6|8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href=""></a><span class="im">from</span> guidance <span class="im">import</span> select</span>
 <span id="cb53-2"><a href=""></a></span>
 <span id="cb53-3"><a href=""></a>text <span class="op">=</span> <span class="st">"Is this email subject likely spam?</span><span class="ch">\n</span><span class="st">"</span></span>
@@ -1931,7 +1931,7 @@ This email is likely spam</code></pre>
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">1-Create a prompt</a></li><li><a href="#tabset-2-2">2-Constrain output to a list of strings</a></li><li><a href="#tabset-2-3">3-Combine together</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div id="36e1ddc9" class="cell" data-execution_count="38">
+<div id="b6f4dbeb" class="cell" data-execution_count="38">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="31">
 <div class="sourceCode" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href=""></a><span class="kw">def</span> get_list_additional_topics_prompt(query: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
 <span id="cb55-2"><a href=""></a>    <span class="im">from</span> datetime <span class="im">import</span> datetime</span>
@@ -1945,9 +1945,9 @@ This email is likely spam</code></pre>
 <span id="cb55-10"><a href=""></a>get_list_additional_topics_prompt()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="2cea7eb7" class="cell" data-execution_count="40">
+<div id="9276ded8" class="cell" data-execution_count="40">
 <div class="cell-output cell-output-stdout">
-<pre><code>The local time is 2025-06-02 11:48:28.031903
+<pre><code>The local time is 2025-06-02 13:44:27.477660
 Given the users query, produce a JSON list of other topics related to their query.
 Here is their query: what's the population of Richmond Virginia?
 Provide a list of JSON strings of related topics: </code></pre>
@@ -1955,7 +1955,7 @@ Provide a list of JSON strings of related topics: </code></pre>
 </div>
 </div>
 <div id="tabset-2-2">
-<div id="cbd7b890" class="cell" data-execution_count="41">
+<div id="429bb8b5" class="cell" data-execution_count="41">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="34">
 <div class="sourceCode" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href=""></a><span class="kw">def</span> get_list_of_str_grammar(name<span class="op">=</span><span class="st">"strings"</span>):</span>
 <span id="cb57-2"><a href=""></a>    <span class="im">from</span> pydantic <span class="im">import</span> create_model</span>
@@ -1966,14 +1966,14 @@ Provide a list of JSON strings of related topics: </code></pre>
 <span id="cb57-7"><a href=""></a>get_list_of_str_grammar()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="78d61f5d" class="cell" data-execution_count="42">
+<div id="f018d7a2" class="cell" data-execution_count="42">
 <div class="cell-output cell-output-stdout">
-<pre><code>{{G|140335531168384|G}}</code></pre>
+<pre><code>{{G|139852504324848|G}}</code></pre>
 </div>
 </div>
 </div>
 <div id="tabset-2-3">
-<div id="b263b961" class="cell" data-execution_count="43">
+<div id="588a0638" class="cell" data-execution_count="43">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="36">
 <div class="sourceCode" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href=""></a><span class="kw">def</span> expand_topic_grammar(model, user_q: <span class="bu">str</span>):</span>
 <span id="cb59-2"><a href=""></a>    <span class="cf">return</span> (model</span>
@@ -1987,7 +1987,7 @@ Provide a list of JSON strings of related topics: </code></pre>
 </section>
 <section id="how-does-it-do" class="slide level2">
 <h2>How does it do?</h2>
-<div id="e9cfe214" class="cell" data-execution_count="44">
+<div id="4623bf78" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb60" data-code-line-numbers="1-3|4|5-6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href=""></a><span class="im">from</span> guidance <span class="im">import</span> gen</span>
 <span id="cb60-2"><a href=""></a>user_query <span class="op">=</span> <span class="st">"what's the population of richmond virgnia?"</span></span>
 <span id="cb60-3"><a href=""></a>topics <span class="op">=</span> expand_topic_grammar(g, user_q<span class="op">=</span>user_query)[<span class="st">'topics'</span>]</span>
@@ -2000,7 +2000,7 @@ Provide a list of JSON strings of related topics: </code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="fd15b4e1" class="cell" data-execution_count="45">
+<div id="b3bb451b" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href=""></a><span class="co"># Parse the string to an object</span></span>
 <span id="cb62-2"><a href=""></a>topics <span class="op">=</span> json.loads(topics)[<span class="st">'topics'</span>]</span>
 <span id="cb62-3"><a href=""></a><span class="bu">print</span>(topics)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2013,7 +2013,7 @@ Provide a list of JSON strings of related topics: </code></pre>
 </div>
 <!--
 
-::: {#7b0da80b .cell output-location='fragment' execution_count=46}
+::: {#ae0589dd .cell output-location='fragment' execution_count=46}
 ``` {.python .cell-code}
 topics = expand_topics(g, user_query)
 print(topics)
@@ -2021,7 +2021,7 @@ print(topics)
 
 ::: {.cell-output .cell-output-stdout}
 ```
-['population of virginia by race', 'population of virginia', 'population of usa', 'population of virginia by gender', 'population of richmond', 'population of virginia by income', 'population of cities in virginia', 'population of virginia by education', 'population of virginia by age', 'population of virginia by employment']
+['population of virginia by race', 'population of virginia', 'population of virginia by employment', 'population of virginia by gender', 'population of richmond', 'population of virginia by age', 'population of virginia by income', 'population of cities in virginia', 'population of virginia by education', 'population of usa']
 ```
 :::
 :::
@@ -2038,7 +2038,7 @@ print(topics)
 <section id="first-search-just-use-the-api" class="slide level2">
 <h2>First search: just use the API</h2>
 <h3 id="using-a-quick-two-phase-wikipedia-search">Using a quick two-phase Wikipedia Search</h3>
-<div id="2f9a62ee" class="cell" data-execution_count="47">
+<div id="6b7c8431" class="cell" data-execution_count="47">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="40">
 <div class="sourceCode" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href=""></a><span class="at">@dataclass</span></span>
 <span id="cb64-2"><a href=""></a><span class="kw">class</span> WikipediaTwoPhaseSearch(Serializable):</span>
@@ -2139,7 +2139,7 @@ print(topics)
 </section>
 <section id="use-wikipedias-search-to-retrieve-titles-associated-with-the-topics" class="slide level2">
 <h2>Use Wikipedia’s search to retrieve titles associated with the topics</h2>
-<div id="3ab743bd" class="cell" data-execution_count="48">
+<div id="6fee8b7c" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb65" data-code-line-numbers="1-8|2-3|4-5|6-7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href=""></a>s <span class="op">=</span> WikipediaTwoPhaseSearch()</span>
 <span id="cb65-2"><a href=""></a><span class="co"># Combine the user's original query with the LLMs expanded topics</span></span>
 <span id="cb65-3"><a href=""></a>all_queries <span class="op">=</span> [user_query] <span class="op">+</span> topics</span>
@@ -2178,11 +2178,11 @@ print(topics)
 <td>7</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">World population</td>
-<td>4</td>
+<td data-quarto-table-cell-role="th">West Virginia</td>
+<td>3</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">West Virginia</td>
+<td data-quarto-table-cell-role="th">World population</td>
 <td>3</td>
 </tr>
 <tr class="even">
@@ -2190,7 +2190,7 @@ print(topics)
 <td>3</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">Virginia</td>
+<td data-quarto-table-cell-role="th">List of cities and counties in Virginia</td>
 <td>2</td>
 </tr>
 </tbody>
@@ -2206,7 +2206,7 @@ print(topics)
 <img data-src="index_files/figure-revealjs/cell-50-output-1.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="remove-duplicate-entries" class="slide level2">
 <h2>Remove duplicate entries</h2>
-<div id="d675068e" class="cell" data-execution_count="50">
+<div id="6d5b1efa" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href=""></a><span class="bu">print</span>(<span class="ss">f"Length before deduplicate: </span><span class="sc">{</span><span class="bu">len</span>(titles)<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb66-2"><a href=""></a>titles <span class="op">=</span> <span class="bu">list</span>(<span class="bu">set</span>(titles))</span>
 <span id="cb66-3"><a href=""></a><span class="bu">print</span>(<span class="ss">f"Length AFTER deduplicate: </span><span class="sc">{</span><span class="bu">len</span>(titles)<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -2215,191 +2215,196 @@ print(topics)
 <div class="cell fragment" data-execution_count="50">
 <div class="cell-output cell-output-stdout">
 <pre><code>Length before deduplicate: 50
-Length AFTER deduplicate: 34</code></pre>
+Length AFTER deduplicate: 35</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="43">
-<pre><code>['List of United States cities by population',
- 'List of cities in Alaska',
- 'Virginia City, Nevada',
- 'Prince William County, Virginia',
- 'Richmond, British Columbia',
- 'Tri-Cities, Tennessee',
+<pre><code>['Population pyramid',
  'Demographics of Virginia',
- 'Education in Virginia',
- 'Lynchburg, Virginia',
- 'Demographics of the United States',
- 'List of cities and counties in Virginia',
- 'Age of consent by country',
- 'Richmond, California',
- 'West Virginia',
- 'Gender-affirming surgery',
- 'List of U.S. states and territories by population',
  'List of municipalities in West Virginia',
- 'Metropolitan statistical area',
- 'List of U.S. states and territories by income',
- 'List of cities in Minnesota',
- 'Greater Richmond Region',
+ 'Demographics of the United States',
  'Great Falls, Virginia',
- 'List of U.S. states and territories by historical population',
- 'Richmond, Virginia',
- 'List of Virginia locations by per capita income',
- 'Gender dysphoria',
- 'Virginia',
- 'Population pyramid',
- 'Richmond Hill, Ontario',
- 'List of states and territories of the United States by population density',
  'Race and ethnicity in the United States census',
+ 'West Virginia',
+ 'Richmond, Virginia',
  'World population',
+ 'List of Virginia locations by per capita income',
+ 'Metropolitan statistical area',
+ 'Prince William County, Virginia',
+ 'Greater Richmond Region',
+ 'List of U.S. states and territories by population',
+ 'Richmond Hill, Ontario',
+ 'List of cities in Minnesota',
+ 'List of U.S. states and territories by historical population',
+ 'Gender-affirming surgery',
+ 'List of cities and counties in Virginia',
+ 'List of cities in Alaska',
+ 'List of United States cities by population',
+ 'Gender dysphoria',
+ 'Richmond, California',
+ 'Tri-Cities, Tennessee',
+ 'Virginia City, Nevada',
+ 'Education in Virginia',
+ 'Keystone, West Virginia',
+ 'Trans woman',
+ 'Richmond, British Columbia',
+ 'Virginia',
+ 'Age of consent by country',
  'Transgender',
- 'Sex–gender distinction']</code></pre>
+ 'List of states and territories of the United States by population density',
+ 'Parksley, Virginia',
+ 'List of U.S. states and territories by income']</code></pre>
 </div>
 </div>
 </section>
 <section id="review-summaries" class="slide level2">
 <h2>Review summaries</h2>
-<div id="6f6eb332" class="cell" data-execution_count="51">
+<div id="a871ccdb" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href=""></a><span class="co"># Get the summaries of those pages</span></span>
 <span id="cb69-2"><a href=""></a>summaries <span class="op">=</span> s.get_summaries(titles)</span>
 <span id="cb69-3"><a href=""></a>summaries</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell fragment" data-execution_count="51">
 <div class="cell-output cell-output-display" data-execution_count="44">
-<pre><code>[{'id': 'List of United States cities by population',
-  'title': 'List of United States cities by population',
-  'summary': "This is a list of the most populous municipal corporations of the United States. As defined by the United States Census Bureau, an incorporated place includes cities, towns, villages, boroughs, and municipalities. A few exceptional census-designated places (CDPs) are also included in the Census Bureau's listing of incorporated places. Consolidated city-counties represent a distinct type of government that includes the entire population of a county, or county equivalent. Some consolidated city-counties, however, include multiple incorporated places.",
-  'link': 'https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population'},
- {'id': 'List of cities in Alaska',
-  'title': 'List of cities in Alaska',
-  'summary': "Alaska is a state of the United States in the northwest extremity of the North American continent. According to the 2020 United States Census, Alaska is the 3rd least populous state with 733,391 inhabitants but is the largest by land area spanning 570,640.95 square miles (1,477,953.3 km2). Alaska is divided administratively into 19 organized boroughs and one Unorganized Borough (which is divided into 11 non-administrative census areas) and contains 149 incorporated cities: four unified home rule municipalities, which are considered both boroughs and cities; ten home rule cities; nineteen first class cities; and 116 second class cities. Alaska's incorporated cities cover only 2.1% of the territory's land mass but are home to 69.92% of its population.  The majority of the incorporated land mass consists of the four unified municipalities, each over 1,700 square miles (4,400 km2) in size.",
-  'link': 'https://en.wikipedia.org/wiki/List_of_cities_in_Alaska'},
- {'id': 'Virginia City, Nevada',
-  'title': 'Virginia City, Nevada',
-  'summary': "Virginia City is a census-designated place (CDP) that is the county seat of Storey County, Nevada, United States, and the largest community in the county. The city is a part of the Reno–Sparks Metropolitan Statistical Area.\nVirginia City developed as a boomtown with the 1859 discovery of the Comstock Lode, the first major silver deposit discovery in the United States, with numerous mines opening. The population peaked in the mid-1870s, with an estimated 25,000 residents. The mines' output declined after 1878, and the population declined as a result.",
-  'link': 'https://en.wikipedia.org/wiki/Virginia_City,_Nevada'},
- {'id': 'Prince William County, Virginia',
-  'title': 'Prince William County, Virginia',
-  'summary': "Prince William County lies beside the Potomac River in the Commonwealth of Virginia. At the 2020 census, the population was 482,204, making it Virginia's second most populous county. The county seat is the independent city of Manassas. A part of Northern Virginia, Prince William County is part of the Washington metropolitan area. In 2020, it had the 24th highest income of any county in the United States.",
-  'link': 'https://en.wikipedia.org/wiki/Prince_William_County,_Virginia'},
- {'id': 'Richmond, British Columbia',
-  'title': 'Richmond, British Columbia',
-  'summary': 'Richmond is a city in the coastal Lower Mainland region of British Columbia, Canada. Mainly a suburban city, it occupies almost the entirety of Lulu Island (excluding Queensborough), between the two estuarine distributaries of the Fraser River. Encompassing the adjacent Sea Island (where the Vancouver International Airport is located) and several other smaller islands and uninhabited islets to its north and south, the suburb neighbours Vancouver and Burnaby on the Burrard Peninsula to the north, New Westminster and Annacis Island to the east, Delta to the south, and the Strait of Georgia to the west.\nThe indigenous Coast Salish peoples were the first people to inhabit the area of modern-day Richmond, with the Musqueam Band naming the site near Terra Nova "spələkʷəqs" or "boiling point". Today, East Asian Canadians make up a majority of Richmond\'s population, along with the Continental Asian Canadian population numbering almost three-fourths of the city\'s population.',
-  'link': 'https://en.wikipedia.org/wiki/Richmond,_British_Columbia'},
- {'id': 'Tri-Cities, Tennessee',
-  'title': 'Tri-Cities, Tennessee',
-  'summary': "The Tri-Cities is the region comprising the cities of Kingsport, Johnson City, and Bristol and the surrounding smaller towns and communities in Northeast Tennessee and Southwest Virginia. All three cities are located in Northeast Tennessee, while Bristol has a twin city of the same name in Virginia.\nThe Tri-Cities region was formerly a single Metropolitan Statistical Area (MSA); due to the U.S. Census Bureau's revised definitions of urban areas in the early 2000s, it is now a Combined Statistical Area (CSA) with two metropolitan components: Johnson City and Kingsport–Bristol, TN–VA. [1] However, the Tri-Cities are usually still considered one population center, which is the fifth-largest in Tennessee.\n\n\n== Combined Statistical Area ==\n\n\n=== Components ===\nTennessee\nCarter County\nGreene County\nHawkins County\nSullivan County\nUnicoi County\nWashington County\nVirginia\nScott County\nWashington County\nCity of Bristol (Independent City)\n\n\n=== Communities ===\n\n\n==== Places with more than 50,000 inhabitants ====\nJohnson City, Tennessee (principal city)\nKingsport, Tennessee (principal city)\n\n\n==== Places with 10,000 to 50,000 inhabitants ====\nBristol, Tennessee (principal city)\nBristol, Virginia (principal city)\nElizabethton, Tennessee\nGreeneville, Tennessee\n\n\n==== Places with 1,000 to 10,000 inhabitants ====\n\n\n==== Places with fewer than 1,000 inhabitants ====\nBaileyton, Tennessee\nBulls Gap, Tennessee\nDamascus, Virginia\nEmbreeville, Tennessee (CDP)\nClinchport, Virginia\nDuffield, Virginia\nDungannon, Virginia\nMeadowview, Virginia (CDP)\nMooresburg, Tennessee (CDP)\nNickelsville, Virginia\nTelford, Tennessee (CDP)\nWatauga, Tennessee\n\n\n==== Unincorporated places ====\n\n\n=== Demographics ===\nAs of the census of 2000, there were 480,091 people, 199,218 households, and 138,548 families residing within the CSA. The racial makeup of the CSA was 96.22% White, 2.12% African American, 0.20% Native American, 0.40% Asian, 0.02% Pacific Islander, 0.02% from other races, and 0.74% from two or more races. Hispanic or Latino of any race were 0.92% of the population.",
-  'link': 'https://en.wikipedia.org/wiki/Tri-Cities,_Tennessee'},
+<pre><code>[{'id': 'Population pyramid',
+  'title': 'Population pyramid',
+  'summary': 'A population pyramid (age structure diagram) or "age-sex pyramid" is a graphical illustration of the distribution of a population (typically that of a country or region of the world) by age groups and sex; it typically takes the shape of a pyramid when the population is growing. Males are usually shown on the left and females on the right, and they may be measured in absolute numbers or as a percentage of the total population. The pyramid can be used to visualize the age of a particular population. It is also used in ecology to determine the overall age distribution of a population; an indication of the reproductive capabilities and likelihood of the continuation of a species. Number of people per unit area of land is called population density.',
+  'link': 'https://en.wikipedia.org/wiki/Population_pyramid'},
  {'id': 'Demographics of Virginia',
   'title': 'Demographics of Virginia',
   'summary': 'The demographics of Virginia are the various elements used to describe the population of the Commonwealth of Virginia and are studied by various government and non-government organizations. Virginia is the 12th-most populous state in the United States with over 8 million residents and is the 35th largest in area.\n\n\n== Population of Virginia ==\nAs of the 2010 United States Census, Virginia has a reported population of 8,001,024, which is an increase of 288,933, or 3.6%, from a previous estimate in 2007 and an increase of 922,509, or 13.0%, since the year 2000. This includes an increase from net migration of 314,832 people into the Commonwealth from 2000 to 2007. Immigration from outside the United States resulted in a net increase of 159,627 people, and migration within the country produced a net increase of 155,205 people.',
   'link': 'https://en.wikipedia.org/wiki/Demographics_of_Virginia'},
- {'id': 'Education in Virginia',
-  'title': 'Education in Virginia',
-  'summary': "Education in Virginia addresses the needs of students from pre-kindergarten through adult education. Virginia's educational system consistently ranks in the top ten states on the U.S. Department of Education's National Assessment of Educational Progress, with Virginia students outperforming the average in almost all subject areas and grade levels tested. The 2010 Quality Counts report ranked Virginia's K–12 education fourth best in the country. All school divisions must adhere to educational standards set forth by the Virginia Department of Education, which maintains an assessment and accreditation regime known as the Standards of Learning to ensure accountability. In 2008, 81% of high school students graduated on-time after four years.",
-  'link': 'https://en.wikipedia.org/wiki/Education_in_Virginia'},
- {'id': 'Lynchburg, Virginia',
-  'title': 'Lynchburg, Virginia',
-  'summary': 'Lynchburg is an independent city in the Commonwealth of Virginia in the United States. First settled in 1757 by ferry owner and abolitionist John Lynch, the city\'s population was 79,009 at the 2020 census, making Lynchburg the 11th most populous city in Virginia. Located in the foothills of the Blue Ridge Mountains along the banks of the James River, Lynchburg is known as the "City of Seven Hills" or the "Hill City". In the 1860s, Lynchburg was the only city in Virginia that was not recaptured by the Union before the end of the American Civil War.\nLynchburg lies at the center of a wider metropolitan area close to the geographic center of Virginia locally known as “the Lynchburg area”.',
-  'link': 'https://en.wikipedia.org/wiki/Lynchburg,_Virginia'},
- {'id': 'Demographics of the United States',
-  'title': 'Demographics of the United States',
-  'summary': 'The United States is the third most populous country in the world, and the most populous in the Americas and the Western Hemisphere, with an estimated population of 340,110,988 on July 1, 2024, according to the U.S. Census Bureau. This was an increase of 2.6% over the 2020 federal census of 331,449,281 residents. These figures include the 50 states and the federal capital, Washington, D.C., but exclude the 3.6 million residents of five unincorporated U.S. territories (Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands) as well as several minor uninhabited island possessions. The Census Bureau showed a population increase of 0.98% for the twelve-month period ending in July 2024, slightly below the world estimated annual growth rate of 1.03%. By several metrics, including racial and ethnic background, religious affiliation, and percentage of rural and urban divide, the state of Illinois is the most representative of the larger demography of the United States.',
-  'link': 'https://en.wikipedia.org/wiki/Demographics_of_the_United_States'},
- {'id': 'List of cities and counties in Virginia',
-  'title': 'List of cities and counties in Virginia',
-  'summary': 'The Commonwealth of Virginia is divided into 95 counties, along with 38 independent cities that are considered county-equivalents for census purposes, totaling 133 second-level subdivisions. In Virginia, cities are co-equal levels of government to counties, but towns are part of counties. For some counties, for statistical purposes, the Bureau of Economic Analysis combines any independent cities with the county that it was once part of (before the legislation creating independent cities took place in 1871).\nMany county seats are politically not a part of the counties they serve; under Virginia law, all municipalities incorporated as cities are independent cities and are not part of any county. Some of the cities in the Hampton Roads area, including Virginia Beach, Chesapeake, Newport News, Hampton, and Suffolk were formed from an entire county.',
-  'link': 'https://en.wikipedia.org/wiki/List_of_cities_and_counties_in_Virginia'},
- {'id': 'Age of consent by country',
-  'title': 'Age of consent by country',
-  'summary': 'The age of consent is the age at which a person is considered to be legally competent to consent to sexual acts and is thus the minimum age of a person with whom another person is legally permitted to engage in sexual activity. The distinguishing aspect of the age of consent laws is that the person below the minimum age is regarded as the victim, and their sex partner is regarded as the offender, unless both are underage.\n\n\n== Definitions ==\n\nRestricted by age difference: younger partner is deemed able to consent to having sex with an older one as long as their age difference does not exceed a specified amount.\nRestricted by authority: younger partner is deemed able to consent to having sex with any older partner, so long as said older partner is not in a legally recognised position of trust or authority, which the latter is abusing over the former.\nUnrestricted: age from which one is deemed able to consent to having sex with anyone else at or above the age of consent or the marriageable age if they must be married.',
-  'link': 'https://en.wikipedia.org/wiki/Age_of_consent_by_country'},
- {'id': 'Richmond, California',
-  'title': 'Richmond, California',
-  'summary': "Richmond is a city in western Contra Costa County, California, United States. The city was incorporated on August 3, 1905, and has a city council. Located in the San Francisco Bay Area's East Bay region, Richmond borders San Pablo, Albany, El Cerrito and Pinole in addition to the unincorporated communities of North Richmond, Hasford Heights, Kensington, El Sobrante, Bayview-Montalvin Manor, Tara Hills, and East Richmond Heights, and for a short distance San Francisco on Red Rock Island in the San Francisco Bay.\nRichmond is one of two cities, the other being San Rafael, that sits on the shores of both San Francisco Bay and San Pablo Bay. Its population was 116,448 as of the 2020 United States census making it the second largest city in the United States named Richmond after Richmond, Virginia.",
-  'link': 'https://en.wikipedia.org/wiki/Richmond,_California'},
- {'id': 'West Virginia',
-  'title': 'West Virginia',
-  'summary': 'West Virginia is a mountainous state in the Southern and Mid-Atlantic regions of the United States. It is bordered by Pennsylvania and Maryland to the northeast, Virginia to the southeast, Kentucky to the southwest, and Ohio to the northwest. West Virginia is the 10th-smallest state by area and ranks as the 12th-least populous state, with a population of 1,769,979 residents. The capital and most populous city is Charleston with a population of 49,055.\nWest Virginia was admitted to the Union on June 20, 1863, and was a key border state during the American Civil War.',
-  'link': 'https://en.wikipedia.org/wiki/West_Virginia'},
- {'id': 'Gender-affirming surgery',
-  'title': 'Gender-affirming surgery',
-  'summary': "Gender-affirming surgery (GAS) is a surgical procedure, or series of procedures, that alters a person's physical appearance and sexual characteristics to resemble those associated with their gender identity. The phrase is most often associated with transgender health care, though many such treatments are also pursued by cisgender individuals. It is also known as sex reassignment surgery (SRS), gender confirmation surgery (GCS), and several other names. \nProfessional medical organizations have established Standards of Care, which apply before someone can apply for and receive reassignment surgery, including psychological evaluation, and a period of real-life experience living in the desired gender.\nFeminization surgeries are surgeries that result in female-looking anatomy, such as vaginoplasty, vulvoplasty and breast augmentation.",
-  'link': 'https://en.wikipedia.org/wiki/Gender-affirming_surgery'},
- {'id': 'List of U.S. states and territories by population',
-  'title': 'List of U.S. states and territories by population',
-  'summary': "The states and territories included in the United States Census Bureau's statistics for the United States population, ethnicity, and most other categories include the 50 states and Washington, D.C. Separate statistics are maintained for the five permanently inhabited territories of the United States: Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands.\nAs of April 1, 2020, the date of the 2020 United States census, the nine most populous U.S. states contain slightly more than half of the total population. The 25 least populous states contain less than one-sixth of the total population. California, the most populous state, contains more people than the 21 least populous states combined, and Wyoming, the least populous state, has a population less than any of the 31 most populous U.S. cities.\n\n\n== Method ==\nThe United States Census counts the persons residing in the United States including citizens, non-citizen permanent residents and non-citizen long-term visitors.",
-  'link': 'https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population'},
  {'id': 'List of municipalities in West Virginia',
   'title': 'List of municipalities in West Virginia',
   'summary': 'West Virginia is a state located in the Southern United States. There are 232 municipalities.\n\n\n== Cities ==\n\n\tLargest municipalities in West Virginia by population\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\t\t\n\t\t\t\n\t\t\t\n\t\t\n\n\n== List of municipalities ==\n\n\n== Former towns ==\nThese communities were once towns but disincorporated.',
   'link': 'https://en.wikipedia.org/wiki/List_of_municipalities_in_West_Virginia'},
- {'id': 'Metropolitan statistical area',
-  'title': 'Metropolitan statistical area',
-  'summary': 'In the United States, a metropolitan statistical area (MSA) is a geographical region with a relatively high population density at its core and close economic ties throughout the region. Such regions are not legally incorporated as a city or town would be and are not legal administrative divisions like counties or separate entities such as states. As a result, sometimes the precise definition of a given metropolitan area will vary between sources. The statistical criteria for a standard metropolitan area were defined in 1949 and redefined as a metropolitan statistical area in 1983.\nDue to suburbanization, the typical metropolitan area is polycentric rather than being centered around a large historic core city such as New York City or Chicago.',
-  'link': 'https://en.wikipedia.org/wiki/Metropolitan_statistical_area'},
- {'id': 'List of U.S. states and territories by income',
-  'title': 'List of U.S. states and territories by income',
-  'summary': 'This has lists of U.S. states, territories, and Washington, D.C. by income. Data is from various sources, such as the Bureau of Labor Statistics and the yearly American Community Survey (ACS). Data is less frequent for American Samoa, Guam, the Northern Mariana Islands and the U.S. Virgin Islands.\nAverage or mean full-time wage in the United States was $80,115 in 2023. Median full-time wage in the U.S. was $48,060 in 2023.',
-  'link': 'https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_income'},
- {'id': 'List of cities in Minnesota',
-  'title': 'List of cities in Minnesota',
-  'summary': 'Minnesota is a state situated in the Midwestern United States. According to the 2020 United States census, Minnesota is the 22nd most populous state with 5,706,494 inhabitants but the 14th largest by land area, spanning 79,626.74 square miles (206,232.3 km2) of land. Minnesota is divided into 87 counties and contains 855 incorporated cities, with populations ranging from 428,579 (Minneapolis) to 10 (Kinbrae) in 2024. Minnesota cities are classified by population as a first class city, a second class city, a third class city, or a fourth class city; this is done for legislative purposes.',
-  'link': 'https://en.wikipedia.org/wiki/List_of_cities_in_Minnesota'},
- {'id': 'Greater Richmond Region',
-  'title': 'Greater Richmond Region',
-  'summary': 'The Greater Richmond Region, also known as the Richmond metropolitan area or Central Virginia, is a region and metropolitan area in the U.S. state of Virginia, centered on Richmond. The U.S. Office of Management and Budget (OMB) defines the area as the Richmond, VA Metropolitan Statistical Area, a metropolitan statistical area (MSA) used by the U.S. Census Bureau and other entities. The OMB defines the area as comprising 17 county-level jurisdictions, including the independent cities of Richmond, Petersburg, Hopewell, and Colonial Heights. As of 2020, it had a population of 1,314,434, making it the 44th largest MSA in the country.\nThe Greater Richmond Region is located in the central part of Virginia.',
-  'link': 'https://en.wikipedia.org/wiki/Greater_Richmond_Region'},
+ {'id': 'Demographics of the United States',
+  'title': 'Demographics of the United States',
+  'summary': 'The United States is the third most populous country in the world, and the most populous in the Americas and the Western Hemisphere, with an estimated population of 340,110,988 on July 1, 2024, according to the U.S. Census Bureau. This was an increase of 2.6% over the 2020 federal census of 331,449,281 residents. These figures include the 50 states and the federal capital, Washington, D.C., but exclude the 3.6 million residents of five unincorporated U.S. territories (Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands) as well as several minor uninhabited island possessions. The Census Bureau showed a population increase of 0.98% for the twelve-month period ending in July 2024, slightly below the world estimated annual growth rate of 1.03%. By several metrics, including racial and ethnic background, religious affiliation, and percentage of rural and urban divide, the state of Illinois is the most representative of the larger demography of the United States.',
+  'link': 'https://en.wikipedia.org/wiki/Demographics_of_the_United_States'},
  {'id': 'Great Falls, Virginia',
   'title': 'Great Falls, Virginia',
   'summary': 'Great Falls is a census-designated place in Fairfax County, Virginia, United States. The population at the 2020 census was 15,953.\n\n\n== History ==\n\nColonial farm settlements began to form in the area as early as the late 1700s.\nEarly on, the village was known as Forestville (unofficially, since there was already a Forestville with a Post Office), but was renamed Great Falls in 1955.\n\n\n== Geography ==\nGreat Falls is located at 38°59′53″N 077°17′18″W (38.9981653, −77.2883157) at an elevation of 344 feet (105 m).',
   'link': 'https://en.wikipedia.org/wiki/Great_Falls,_Virginia'},
- {'id': 'List of U.S. states and territories by historical population',
-  'title': 'List of U.S. states and territories by historical population',
-  'summary': 'This is a list of U.S. states and territories by historical population, as enumerated every decade by the United States Census. As required by the United States Constitution, a census has been conducted every 10 years since 1790. Although the decennial census collects a variety of information that has been used in demographic studies, marketing, and other enterprises, the purpose of the census as stated in the Constitution is to produce an "actual enumeration" of the number of persons in the states in order to calculate their Congressional apportionment.\nAs the United States has grown in area and population, new states have been formed out of U.S. territories or the division of existing states. The population figures provided here reflect modern state boundaries.',
-  'link': 'https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_historical_population'},
- {'id': 'Richmond, Virginia',
-  'title': 'Richmond, Virginia',
-  'summary': "Richmond ( RITCH-mənd) is the capital city of the U.S. commonwealth of Virginia. Incorporated in 1742, Richmond has been an independent city since 1871. The city's population in the 2020 United States census was 226,610, up from 204,214 in 2010, making it Virginia's fourth-most populous city. The Richmond metropolitan area, with over 1.3 million residents, is the Commonwealth's third-most populous.\nRichmond is located at the James River's fall line, 44 mi (71 km) west of Williamsburg, 66 mi (106 km) east of Charlottesville, 91 mi (146 km) east of Lynchburg and 92 mi (148 km) south of Washington, D.C. Surrounded by Henrico and Chesterfield counties, Richmond is at the intersection of Interstate 95 and Interstate 64 and encircled by Interstate 295, Virginia State Route 150 and Virginia State Route 288.",
-  'link': 'https://en.wikipedia.org/wiki/Richmond,_Virginia'},
- {'id': 'List of Virginia locations by per capita income',
-  'title': 'List of Virginia locations by per capita income',
-  'summary': 'Virginia has the sixth highest per capita income of any state in the United States of America, at $23,975 (2000).  Its personal per capita income is $33,671 (2003).\n\nNote: Data is from the 2010 United States Census Data and the 2006-2010 American Community Survey 5-Year Estimates.',
-  'link': 'https://en.wikipedia.org/wiki/List_of_Virginia_locations_by_per_capita_income'},
- {'id': 'Gender dysphoria',
-  'title': 'Gender dysphoria',
-  'summary': 'Gender dysphoria (GD) is the distress a person experiences due to a mismatch between their gender identity—their personal sense of their own gender—and their sex assigned at birth. The term replaced the previous diagnostic label of gender identity disorder (GID) in 2013 with the release of the diagnostic manual DSM-5. The condition was renamed to remove the stigma associated with the term disorder. The International Classification of Diseases uses the term gender incongruence (GI) instead of gender dysphoria, defined as a marked and persistent mismatch between gender identity and assigned gender, regardless of distress or impairment. Not all transgender people have gender dysphoria.',
-  'link': 'https://en.wikipedia.org/wiki/Gender_dysphoria'},
- {'id': 'Virginia',
-  'title': 'Virginia',
-  'summary': "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. The state's capital is Richmond and its most populous city is Virginia Beach. Its most populous subdivision is Fairfax County, part of Northern Virginia, where slightly over a third of Virginia's population of more than 8.8 million live.\nEastern Virginia is part of the Atlantic Plain, and the Middle Peninsula forms the mouth of the Chesapeake Bay. Central Virginia lies predominantly in the Piedmont, the foothill region of the Blue Ridge Mountains, which cross the western and southwestern parts of the state.",
-  'link': 'https://en.wikipedia.org/wiki/Virginia'},
- {'id': 'Population pyramid',
-  'title': 'Population pyramid',
-  'summary': 'A population pyramid (age structure diagram) or "age-sex pyramid" is a graphical illustration of the distribution of a population (typically that of a country or region of the world) by age groups and sex; it typically takes the shape of a pyramid when the population is growing. Males are usually shown on the left and females on the right, and they may be measured in absolute numbers or as a percentage of the total population. The pyramid can be used to visualize the age of a particular population. It is also used in ecology to determine the overall age distribution of a population; an indication of the reproductive capabilities and likelihood of the continuation of a species. Number of people per unit area of land is called population density.',
-  'link': 'https://en.wikipedia.org/wiki/Population_pyramid'},
- {'id': 'Richmond Hill, Ontario',
-  'title': 'Richmond Hill, Ontario',
-  'summary': "Richmond Hill (2021 population: 202,022) is a city in south-central York Region, Ontario, Canada. Part of the Greater Toronto Area, it is the York Region's third most populous municipality and the 27th most populous municipality in Canada. Richmond Hill is situated between the cities of Markham and Vaughan, north of Thornhill, and south of Aurora.\nRichmond Hill has seen significant population growth since the 1990s. It became a city in 2019 after being a town since 1957.",
-  'link': 'https://en.wikipedia.org/wiki/Richmond_Hill,_Ontario'},
- {'id': 'List of states and territories of the United States by population density',
-  'title': 'List of states and territories of the United States by population density',
-  'summary': "This is a list of the 50 states, the 5 territories, and the District of Columbia of the United States of America by population density, population size, and land area. It also includes a sortable table of density by states, territories, divisions, and regions by population rank and land area, and a sortable table for density by states, divisions, regions, and territories in square miles and square kilometers.\nThe population density of the United States is lower than that of many other countries because of the United States' large land area. There are large, sparsely populated areas in parts of the US, like the east-to-west stretch extending from the outskirts of Seattle all the way to Minneapolis, or the north-to-south portion from northern Montana to southern New Mexico, excluding Denver and Albuquerque. For comparison, the population density of the U.S. is 1/15 that of South Korea and 1/12 that of India and the Netherlands.",
-  'link': 'https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population_density'},
  {'id': 'Race and ethnicity in the United States census',
   'title': 'Race and ethnicity in the United States census',
   'summary': 'In the United States census, the U.S. Census Bureau and the Office of Management and Budget (OMB) define a set of self-identified categories of race and ethnicity chosen by residents, with which they most closely identify. Residents can indicate their origins alongside their race, and are asked specifically whether they are of Hispanic or Latino origin in a separate question.\nRace and ethnicity are considered separate and distinct identities, with a person\'s origins considered in the census. Racial categories in the United States represent a social-political construct for the race or races that respondents consider themselves to be and, "generally reflect a social definition of race recognized in this country". The OMB defines the concept of race as outlined for the census to be not "scientific or anthropological", and takes into account "social and cultural characteristics as well as ancestry", using "appropriate scientific methodologies" that are not "primarily biological or genetic in reference." The race categories include both racial and national-origin groups.',
   'link': 'https://en.wikipedia.org/wiki/Race_and_ethnicity_in_the_United_States_census'},
+ {'id': 'West Virginia',
+  'title': 'West Virginia',
+  'summary': 'West Virginia is a mountainous state in the Southern and Mid-Atlantic regions of the United States. It is bordered by Pennsylvania and Maryland to the northeast, Virginia to the southeast, Kentucky to the southwest, and Ohio to the northwest. West Virginia is the 10th-smallest state by area and ranks as the 12th-least populous state, with a population of 1,769,979 residents. The capital and most populous city is Charleston with a population of 49,055.\nWest Virginia was admitted to the Union on June 20, 1863, and was a key border state during the American Civil War.',
+  'link': 'https://en.wikipedia.org/wiki/West_Virginia'},
+ {'id': 'Richmond, Virginia',
+  'title': 'Richmond, Virginia',
+  'summary': "Richmond ( RITCH-mənd) is the capital city of the U.S. commonwealth of Virginia. Incorporated in 1742, Richmond has been an independent city since 1871. The city's population in the 2020 United States census was 226,610, up from 204,214 in 2010, making it Virginia's fourth-most populous city. The Richmond metropolitan area, with over 1.3 million residents, is the Commonwealth's third-most populous.\nRichmond is located at the James River's fall line, 44 mi (71 km) west of Williamsburg, 66 mi (106 km) east of Charlottesville, 91 mi (146 km) east of Lynchburg and 92 mi (148 km) south of Washington, D.C. Surrounded by Henrico and Chesterfield counties, Richmond is at the intersection of Interstate 95 and Interstate 64 and encircled by Interstate 295, Virginia State Route 150 and Virginia State Route 288.",
+  'link': 'https://en.wikipedia.org/wiki/Richmond,_Virginia'},
  {'id': 'World population',
   'title': 'World population',
   'summary': 'In world demographics, the world population is the total number of humans currently alive. It was estimated by the United Nations to have exceeded eight billion in mid-November 2022. It took around 300,000 years of human prehistory and history for the human population to reach a billion and only 218 more years to reach 8 billion.\nThe human population has experienced continuous growth following the Great Famine of 1315–1317 and the end of the Black Death in 1350, when it was nearly 370,000,000. The highest global population growth rates, with increases of over 1.8% per year, occurred between 1955 and 1975, peaking at 2.1% between 1965 and 1970.',
   'link': 'https://en.wikipedia.org/wiki/World_population'},
+ {'id': 'List of Virginia locations by per capita income',
+  'title': 'List of Virginia locations by per capita income',
+  'summary': 'Virginia has the sixth highest per capita income of any state in the United States of America, at $23,975 (2000).  Its personal per capita income is $33,671 (2003).\n\nNote: Data is from the 2010 United States Census Data and the 2006-2010 American Community Survey 5-Year Estimates.',
+  'link': 'https://en.wikipedia.org/wiki/List_of_Virginia_locations_by_per_capita_income'},
+ {'id': 'Metropolitan statistical area',
+  'title': 'Metropolitan statistical area',
+  'summary': 'In the United States, a metropolitan statistical area (MSA) is a geographical region with a relatively high population density at its core and close economic ties throughout the region. Such regions are not legally incorporated as a city or town would be and are not legal administrative divisions like counties or separate entities such as states. As a result, sometimes the precise definition of a given metropolitan area will vary between sources. The statistical criteria for a standard metropolitan area were defined in 1949 and redefined as a metropolitan statistical area in 1983.\nDue to suburbanization, the typical metropolitan area is polycentric rather than being centered around a large historic core city such as New York City or Chicago.',
+  'link': 'https://en.wikipedia.org/wiki/Metropolitan_statistical_area'},
+ {'id': 'Prince William County, Virginia',
+  'title': 'Prince William County, Virginia',
+  'summary': "Prince William County lies beside the Potomac River in the Commonwealth of Virginia. At the 2020 census, the population was 482,204, making it Virginia's second most populous county. The county seat is the independent city of Manassas. A part of Northern Virginia, Prince William County is part of the Washington metropolitan area. In 2020, it had the 24th highest income of any county in the United States.",
+  'link': 'https://en.wikipedia.org/wiki/Prince_William_County,_Virginia'},
+ {'id': 'Greater Richmond Region',
+  'title': 'Greater Richmond Region',
+  'summary': 'The Greater Richmond Region, also known as the Richmond metropolitan area or Central Virginia, is a region and metropolitan area in the U.S. state of Virginia, centered on Richmond. The U.S. Office of Management and Budget (OMB) defines the area as the Richmond, VA Metropolitan Statistical Area, a metropolitan statistical area (MSA) used by the U.S. Census Bureau and other entities. The OMB defines the area as comprising 17 county-level jurisdictions, including the independent cities of Richmond, Petersburg, Hopewell, and Colonial Heights. As of 2020, it had a population of 1,314,434, making it the 44th largest MSA in the country.\nThe Greater Richmond Region is located in the central part of Virginia.',
+  'link': 'https://en.wikipedia.org/wiki/Greater_Richmond_Region'},
+ {'id': 'List of U.S. states and territories by population',
+  'title': 'List of U.S. states and territories by population',
+  'summary': "The states and territories included in the United States Census Bureau's statistics for the United States population, ethnicity, and most other categories include the 50 states and Washington, D.C. Separate statistics are maintained for the five permanently inhabited territories of the United States: Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands.\nAs of April 1, 2020, the date of the 2020 United States census, the nine most populous U.S. states contain slightly more than half of the total population. The 25 least populous states contain less than one-sixth of the total population. California, the most populous state, contains more people than the 21 least populous states combined, and Wyoming, the least populous state, has a population less than any of the 31 most populous U.S. cities.\n\n\n== Method ==\nThe United States Census counts the persons residing in the United States including citizens, non-citizen permanent residents and non-citizen long-term visitors.",
+  'link': 'https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population'},
+ {'id': 'Richmond Hill, Ontario',
+  'title': 'Richmond Hill, Ontario',
+  'summary': "Richmond Hill (2021 population: 202,022) is a city in south-central York Region, Ontario, Canada. Part of the Greater Toronto Area, it is the York Region's third most populous municipality and the 27th most populous municipality in Canada. Richmond Hill is situated between the cities of Markham and Vaughan, north of Thornhill, and south of Aurora.\nRichmond Hill has seen significant population growth since the 1990s. It became a city in 2019 after being a town since 1957.",
+  'link': 'https://en.wikipedia.org/wiki/Richmond_Hill,_Ontario'},
+ {'id': 'List of cities in Minnesota',
+  'title': 'List of cities in Minnesota',
+  'summary': 'Minnesota is a state situated in the Midwestern United States. According to the 2020 United States census, Minnesota is the 22nd most populous state with 5,706,494 inhabitants but the 14th largest by land area, spanning 79,626.74 square miles (206,232.3 km2) of land. Minnesota is divided into 87 counties and contains 855 incorporated cities, with populations ranging from 428,579 (Minneapolis) to 10 (Kinbrae) in 2024. Minnesota cities are classified by population as a first class city, a second class city, a third class city, or a fourth class city; this is done for legislative purposes.',
+  'link': 'https://en.wikipedia.org/wiki/List_of_cities_in_Minnesota'},
+ {'id': 'List of U.S. states and territories by historical population',
+  'title': 'List of U.S. states and territories by historical population',
+  'summary': 'This is a list of U.S. states and territories by historical population, as enumerated every decade by the United States Census. As required by the United States Constitution, a census has been conducted every 10 years since 1790. Although the decennial census collects a variety of information that has been used in demographic studies, marketing, and other enterprises, the purpose of the census as stated in the Constitution is to produce an "actual enumeration" of the number of persons in the states in order to calculate their Congressional apportionment.\nAs the United States has grown in area and population, new states have been formed out of U.S. territories or the division of existing states. The population figures provided here reflect modern state boundaries.',
+  'link': 'https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_historical_population'},
+ {'id': 'Gender-affirming surgery',
+  'title': 'Gender-affirming surgery',
+  'summary': "Gender-affirming surgery (GAS) is a surgical procedure, or series of procedures, that alters a person's physical appearance and sexual characteristics to resemble those associated with their gender identity. The phrase is most often associated with transgender health care, though many such treatments are also pursued by cisgender individuals. It is also known as sex reassignment surgery (SRS), gender confirmation surgery (GCS), and several other names. \nProfessional medical organizations have established Standards of Care, which apply before someone can apply for and receive reassignment surgery, including psychological evaluation, and a period of real-life experience living in the desired gender.\nFeminization surgeries are surgeries that result in female-looking anatomy, such as vaginoplasty, vulvoplasty and breast augmentation.",
+  'link': 'https://en.wikipedia.org/wiki/Gender-affirming_surgery'},
+ {'id': 'List of cities and counties in Virginia',
+  'title': 'List of cities and counties in Virginia',
+  'summary': 'The Commonwealth of Virginia is divided into 95 counties, along with 38 independent cities that are considered county-equivalents for census purposes, totaling 133 second-level subdivisions. In Virginia, cities are co-equal levels of government to counties, but towns are part of counties. For some counties, for statistical purposes, the Bureau of Economic Analysis combines any independent cities with the county that it was once part of (before the legislation creating independent cities took place in 1871).\nMany county seats are politically not a part of the counties they serve; under Virginia law, all municipalities incorporated as cities are independent cities and are not part of any county. Some of the cities in the Hampton Roads area, including Virginia Beach, Chesapeake, Newport News, Hampton, and Suffolk were formed from an entire county.',
+  'link': 'https://en.wikipedia.org/wiki/List_of_cities_and_counties_in_Virginia'},
+ {'id': 'List of cities in Alaska',
+  'title': 'List of cities in Alaska',
+  'summary': "Alaska is a state of the United States in the northwest extremity of the North American continent. According to the 2020 United States Census, Alaska is the 3rd least populous state with 733,391 inhabitants but is the largest by land area spanning 570,640.95 square miles (1,477,953.3 km2). Alaska is divided administratively into 19 organized boroughs and one Unorganized Borough (which is divided into 11 non-administrative census areas) and contains 149 incorporated cities: four unified home rule municipalities, which are considered both boroughs and cities; ten home rule cities; nineteen first class cities; and 116 second class cities. Alaska's incorporated cities cover only 2.1% of the territory's land mass but are home to 69.92% of its population.  The majority of the incorporated land mass consists of the four unified municipalities, each over 1,700 square miles (4,400 km2) in size.",
+  'link': 'https://en.wikipedia.org/wiki/List_of_cities_in_Alaska'},
+ {'id': 'List of United States cities by population',
+  'title': 'List of United States cities by population',
+  'summary': "This is a list of the most populous municipal corporations of the United States. As defined by the United States Census Bureau, an incorporated place includes cities, towns, villages, boroughs, and municipalities. A few exceptional census-designated places (CDPs) are also included in the Census Bureau's listing of incorporated places. Consolidated city-counties represent a distinct type of government that includes the entire population of a county, or county equivalent. Some consolidated city-counties, however, include multiple incorporated places.",
+  'link': 'https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population'},
+ {'id': 'Gender dysphoria',
+  'title': 'Gender dysphoria',
+  'summary': 'Gender dysphoria (GD) is the distress a person experiences due to a mismatch between their gender identity—their personal sense of their own gender—and their sex assigned at birth. The term replaced the previous diagnostic label of gender identity disorder (GID) in 2013 with the release of the diagnostic manual DSM-5. The condition was renamed to remove the stigma associated with the term disorder. The International Classification of Diseases uses the term gender incongruence (GI) instead of gender dysphoria, defined as a marked and persistent mismatch between gender identity and assigned gender, regardless of distress or impairment. Not all transgender people have gender dysphoria.',
+  'link': 'https://en.wikipedia.org/wiki/Gender_dysphoria'},
+ {'id': 'Richmond, California',
+  'title': 'Richmond, California',
+  'summary': "Richmond is a city in western Contra Costa County, California, United States. The city was incorporated on August 3, 1905, and has a city council. Located in the San Francisco Bay Area's East Bay region, Richmond borders San Pablo, Albany, El Cerrito and Pinole in addition to the unincorporated communities of North Richmond, Hasford Heights, Kensington, El Sobrante, Bayview-Montalvin Manor, Tara Hills, and East Richmond Heights, and for a short distance San Francisco on Red Rock Island in the San Francisco Bay.\nRichmond is one of two cities, the other being San Rafael, that sits on the shores of both San Francisco Bay and San Pablo Bay. Its population was 116,448 as of the 2020 United States census making it the second largest city in the United States named Richmond after Richmond, Virginia.",
+  'link': 'https://en.wikipedia.org/wiki/Richmond,_California'},
+ {'id': 'Tri-Cities, Tennessee',
+  'title': 'Tri-Cities, Tennessee',
+  'summary': "The Tri-Cities is the region comprising the cities of Kingsport, Johnson City, and Bristol and the surrounding smaller towns and communities in Northeast Tennessee and Southwest Virginia. All three cities are located in Northeast Tennessee, while Bristol has a twin city of the same name in Virginia.\nThe Tri-Cities region was formerly a single Metropolitan Statistical Area (MSA); due to the U.S. Census Bureau's revised definitions of urban areas in the early 2000s, it is now a Combined Statistical Area (CSA) with two metropolitan components: Johnson City and Kingsport–Bristol, TN–VA. [1] However, the Tri-Cities are usually still considered one population center, which is the fifth-largest in Tennessee.\n\n\n== Combined Statistical Area ==\n\n\n=== Components ===\nTennessee\nCarter County\nGreene County\nHawkins County\nSullivan County\nUnicoi County\nWashington County\nVirginia\nScott County\nWashington County\nCity of Bristol (Independent City)\n\n\n=== Communities ===\n\n\n==== Places with more than 50,000 inhabitants ====\nJohnson City, Tennessee (principal city)\nKingsport, Tennessee (principal city)\n\n\n==== Places with 10,000 to 50,000 inhabitants ====\nBristol, Tennessee (principal city)\nBristol, Virginia (principal city)\nElizabethton, Tennessee\nGreeneville, Tennessee\n\n\n==== Places with 1,000 to 10,000 inhabitants ====\n\n\n==== Places with fewer than 1,000 inhabitants ====\nBaileyton, Tennessee\nBulls Gap, Tennessee\nDamascus, Virginia\nEmbreeville, Tennessee (CDP)\nClinchport, Virginia\nDuffield, Virginia\nDungannon, Virginia\nMeadowview, Virginia (CDP)\nMooresburg, Tennessee (CDP)\nNickelsville, Virginia\nTelford, Tennessee (CDP)\nWatauga, Tennessee\n\n\n==== Unincorporated places ====\n\n\n=== Demographics ===\nAs of the census of 2000, there were 480,091 people, 199,218 households, and 138,548 families residing within the CSA. The racial makeup of the CSA was 96.22% White, 2.12% African American, 0.20% Native American, 0.40% Asian, 0.02% Pacific Islander, 0.02% from other races, and 0.74% from two or more races. Hispanic or Latino of any race were 0.92% of the population.",
+  'link': 'https://en.wikipedia.org/wiki/Tri-Cities,_Tennessee'},
+ {'id': 'Virginia City, Nevada',
+  'title': 'Virginia City, Nevada',
+  'summary': "Virginia City is a census-designated place (CDP) that is the county seat of Storey County, Nevada, United States, and the largest community in the county. The city is a part of the Reno–Sparks Metropolitan Statistical Area.\nVirginia City developed as a boomtown with the 1859 discovery of the Comstock Lode, the first major silver deposit discovery in the United States, with numerous mines opening. The population peaked in the mid-1870s, with an estimated 25,000 residents. The mines' output declined after 1878, and the population declined as a result.",
+  'link': 'https://en.wikipedia.org/wiki/Virginia_City,_Nevada'},
+ {'id': 'Education in Virginia',
+  'title': 'Education in Virginia',
+  'summary': "Education in Virginia addresses the needs of students from pre-kindergarten through adult education. Virginia's educational system consistently ranks in the top ten states on the U.S. Department of Education's National Assessment of Educational Progress, with Virginia students outperforming the average in almost all subject areas and grade levels tested. The 2010 Quality Counts report ranked Virginia's K–12 education fourth best in the country. All school divisions must adhere to educational standards set forth by the Virginia Department of Education, which maintains an assessment and accreditation regime known as the Standards of Learning to ensure accountability. In 2008, 81% of high school students graduated on-time after four years.",
+  'link': 'https://en.wikipedia.org/wiki/Education_in_Virginia'},
+ {'id': 'Keystone, West Virginia',
+  'title': 'Keystone, West Virginia',
+  'summary': 'Keystone is a city in McDowell County, West Virginia, United States. Per the 2020 census, the population was 176.  Keystone is one of the few municipalities in West Virginia with an African-American majority, with 65 percent of the residents being black.\nThe term "Free State of McDowell" was coined by Matthew Thomas Whittico, a local newspaper editor and community leader from Keystone in the early 20th century.  Keystone possessed a unique combination of political, social, and economic characteristics that made it an attractive place for African-Americans to migrate to in the late 1800s and early 1900s.',
+  'link': 'https://en.wikipedia.org/wiki/Keystone,_West_Virginia'},
+ {'id': 'Trans woman',
+  'title': 'Trans woman',
+  'summary': "A trans woman or transgender woman is a woman who was assigned male at birth. Trans women have a female gender identity and may experience gender dysphoria (distress brought upon by the discrepancy between a person's gender identity and their sex assigned at birth). Gender dysphoria may be treated with gender-affirming care.\nGender-affirming care may include social or medical transition. Social transition may include adopting a new name, hairstyle, clothing style, and/or set of pronouns associated with the individual's affirmed gender identity.",
+  'link': 'https://en.wikipedia.org/wiki/Trans_woman'},
+ {'id': 'Richmond, British Columbia',
+  'title': 'Richmond, British Columbia',
+  'summary': 'Richmond is a city in the coastal Lower Mainland region of British Columbia, Canada. Mainly a suburban city, it occupies almost the entirety of Lulu Island (excluding Queensborough), between the two estuarine distributaries of the Fraser River. Encompassing the adjacent Sea Island (where the Vancouver International Airport is located) and several other smaller islands and uninhabited islets to its north and south, the suburb neighbours Vancouver and Burnaby on the Burrard Peninsula to the north, New Westminster and Annacis Island to the east, Delta to the south, and the Strait of Georgia to the west.\nThe indigenous Coast Salish peoples were the first people to inhabit the area of modern-day Richmond, with the Musqueam Band naming the site near Terra Nova "spələkʷəqs" or "boiling point". Today, East Asian Canadians make up a majority of Richmond\'s population, along with the Continental Asian Canadian population numbering almost three-fourths of the city\'s population.',
+  'link': 'https://en.wikipedia.org/wiki/Richmond,_British_Columbia'},
+ {'id': 'Virginia',
+  'title': 'Virginia',
+  'summary': "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. The state's capital is Richmond and its most populous city is Virginia Beach. Its most populous subdivision is Fairfax County, part of Northern Virginia, where slightly over a third of Virginia's population of more than 8.8 million live.\nEastern Virginia is part of the Atlantic Plain, and the Middle Peninsula forms the mouth of the Chesapeake Bay. Central Virginia lies predominantly in the Piedmont, the foothill region of the Blue Ridge Mountains, which cross the western and southwestern parts of the state.",
+  'link': 'https://en.wikipedia.org/wiki/Virginia'},
+ {'id': 'Age of consent by country',
+  'title': 'Age of consent by country',
+  'summary': 'The age of consent is the age at which a person is considered to be legally competent to consent to sexual acts and is thus the minimum age of a person with whom another person is legally permitted to engage in sexual activity. The distinguishing aspect of the age of consent laws is that the person below the minimum age is regarded as the victim, and their sex partner is regarded as the offender, unless both are underage.\n\n\n== Definitions ==\n\nRestricted by age difference: younger partner is deemed able to consent to having sex with an older one as long as their age difference does not exceed a specified amount.\nRestricted by authority: younger partner is deemed able to consent to having sex with any older partner, so long as said older partner is not in a legally recognised position of trust or authority, which the latter is abusing over the former.\nUnrestricted: age from which one is deemed able to consent to having sex with anyone else at or above the age of consent or the marriageable age if they must be married.',
+  'link': 'https://en.wikipedia.org/wiki/Age_of_consent_by_country'},
  {'id': 'Transgender',
   'title': 'Transgender',
   'summary': 'A transgender (often shortened to trans) person has a gender identity different from that typically associated with the sex they were assigned at birth. \nThe opposite of transgender is cisgender, which describes persons whose gender identity matches their assigned sex.\nOften, transgender people desire medical assistance to medically transition from one sex to another; those who do may identify as transsexual. Transgender does not have a universally accepted definition, including among researchers; it can function as an umbrella term. The definition given above includes binary trans men and trans women and may also include people who are non-binary or genderqueer.',
   'link': 'https://en.wikipedia.org/wiki/Transgender'},
- {'id': 'Sex–gender distinction',
-  'title': 'Sex–gender distinction',
-  'summary': "While in ordinary speech, the terms sex and gender are often used interchangeably, in contemporary academic literature, the terms often have distinct meanings, especially when referring to people. Sex generally refers to an organism's assigned biological sex, while gender usually refers to either social roles typically associated with the sex of a person (gender role) or personal identification of one's own gender based on their own personal sense of it (gender identity). Most contemporary social scientists, behavioral scientists and biologists, many legal systems and government bodies and intergovernmental agencies such as the WHO make a distinction between gender and sex. In most individuals, the various biological determinants of sex are congruent, and sex is consistent with the individual's gender identity, but in rare circumstances, an individual's assigned sex and gender do not align, and the person may be transgender.\nThough sex and gender have been used interchangeably at least as early as the fourteenth century, this usage was not common by the late 1900s.",
-  'link': 'https://en.wikipedia.org/wiki/Sex–gender_distinction'}]</code></pre>
+ {'id': 'List of states and territories of the United States by population density',
+  'title': 'List of states and territories of the United States by population density',
+  'summary': "This is a list of the 50 states, the 5 territories, and the District of Columbia of the United States of America by population density, population size, and land area. It also includes a sortable table of density by states, territories, divisions, and regions by population rank and land area, and a sortable table for density by states, divisions, regions, and territories in square miles and square kilometers.\nThe population density of the United States is lower than that of many other countries because of the United States' large land area. There are large, sparsely populated areas in parts of the US, like the east-to-west stretch extending from the outskirts of Seattle all the way to Minneapolis, or the north-to-south portion from northern Montana to southern New Mexico, excluding Denver and Albuquerque. For comparison, the population density of the U.S. is 1/15 that of South Korea and 1/12 that of India and the Netherlands.",
+  'link': 'https://en.wikipedia.org/wiki/List_of_states_and_territories_of_the_United_States_by_population_density'},
+ {'id': 'Parksley, Virginia',
+  'title': 'Parksley, Virginia',
+  'summary': 'Parksley is a town in Accomack County, Virginia, United States. The population was 842 at the 2010 census. It is home to the Eastern Shore Railway Museum.\n\n\n== Geography ==\nParksley is located at 37°47′6″N 75°39′15″W (37.785078, -75.654222).\nAccording to the United States Census Bureau the town has a total area of 0.6 square mile (1.6 km2), all  land.',
+  'link': 'https://en.wikipedia.org/wiki/Parksley,_Virginia'},
+ {'id': 'List of U.S. states and territories by income',
+  'title': 'List of U.S. states and territories by income',
+  'summary': 'This has lists of U.S. states, territories, and Washington, D.C. by income. Data is from various sources, such as the Bureau of Labor Statistics and the yearly American Community Survey (ACS). Data is less frequent for American Samoa, Guam, the Northern Mariana Islands and the U.S. Virgin Islands.\nAverage or mean full-time wage in the United States was $80,115 in 2023. Median full-time wage in the U.S. was $48,060 in 2023.',
+  'link': 'https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_income'}]</code></pre>
 </div>
 </div>
 </section>
@@ -2407,7 +2412,7 @@ Length AFTER deduplicate: 34</code></pre>
 <h2>Assessing relevance</h2>
 <!--TODO: break this up and show the internals like the other one? Maybe leave it to them to go look up
  -->
-<div id="38e8156d" class="cell" data-execution_count="52">
+<div id="d72980e1" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb71-1"><a href=""></a><span class="im">from</span> guidance_web_search <span class="im">import</span> relevance_by_independent_scoring</span>
 <span id="cb71-2"><a href=""></a></span>
 <span id="cb71-3"><a href=""></a>scores_df <span class="op">=</span> relevance_by_independent_scoring(g, query<span class="op">=</span>user_query, summaries<span class="op">=</span>summaries)</span>
@@ -2445,29 +2450,29 @@ Length AFTER deduplicate: 34</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">List of United States cities by population</td>
-<td>85</td>
-<td>{'id': 'List of United States cities by popula...</td>
-</tr>
-<tr class="even">
 <td data-quarto-table-cell-role="th">Demographics of Virginia</td>
 <td>85</td>
 <td>{'id': 'Demographics of Virginia', 'title': 'D...</td>
 </tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">Virginia</td>
-<td>85</td>
-<td>{'id': 'Virginia', 'title': 'Virginia', 'summa...</td>
-</tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">List of U.S. states and territories by population</td>
+<td data-quarto-table-cell-role="th">Greater Richmond Region</td>
 <td>85</td>
-<td>{'id': 'List of U.S. states and territories by...</td>
+<td>{'id': 'Greater Richmond Region', 'title': 'Gr...</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">Richmond, Virginia</td>
 <td>85</td>
 <td>{'id': 'Richmond, Virginia', 'title': 'Richmon...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">Virginia</td>
+<td>85</td>
+<td>{'id': 'Virginia', 'title': 'Virginia', 'summa...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">List of United States cities by population</td>
+<td>85</td>
+<td>{'id': 'List of United States cities by popula...</td>
 </tr>
 </tbody>
 </table>
@@ -2476,7 +2481,7 @@ Length AFTER deduplicate: 34</code></pre>
 </div>
 </div>
 <div class="fragment">
-<div id="6b105696" class="cell" data-execution_count="53">
+<div id="e6a47c8d" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href=""></a>scores_df[<span class="st">'is_relevant'</span>] <span class="op">=</span> scores_df.relevance_score.pipe(</span>
 <span id="cb72-2"><a href=""></a>    <span class="kw">lambda</span> s: s.gt(s.median()) <span class="op">|</span> s.eq(s.<span class="bu">max</span>()))</span>
 <span id="cb72-3"><a href=""></a></span>
@@ -2489,7 +2494,7 @@ Length AFTER deduplicate: 34</code></pre>
 </section>
 <section id="prompt-for-an-answer" class="slide level2">
 <h2>Prompt for an answer</h2>
-<div id="20bb293c" class="cell" data-execution_count="54">
+<div id="7350ff76" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href=""></a><span class="im">import</span> json</span>
 <span id="cb73-2"><a href=""></a><span class="im">from</span> guidance_web_search <span class="im">import</span> get_q_and_a_grammar</span>
 <span id="cb73-3"><a href=""></a></span>
@@ -2511,28 +2516,16 @@ Length AFTER deduplicate: 34</code></pre>
 --------------
 [
   {
-    "id": "List of United States cities by population",
-    "title": "List of United States cities by population",
-    "summary": "This is a list of the most populous municipal corporations of the United States. As defined by the United States Census Bureau, an incorporated place includes cities, towns, villages, boroughs, and municipalities. A few exceptional census-designated places (CDPs) are also included in the Census Bureau's listing of incorporated places. Consolidated city-counties represent a distinct type of government that includes the entire population of a county, or county equivalent. Some consolidated city-counties, however, include multiple incorporated places.",
-    "link": "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
-  },
-  {
     "id": "Demographics of Virginia",
     "title": "Demographics of Virginia",
     "summary": "The demographics of Virginia are the various elements used to describe the population of the Commonwealth of Virginia and are studied by various government and non-government organizations. Virginia is the 12th-most populous state in the United States with over 8 million residents and is the 35th largest in area.\n\n\n== Population of Virginia ==\nAs of the 2010 United States Census, Virginia has a reported population of 8,001,024, which is an increase of 288,933, or 3.6%, from a previous estimate in 2007 and an increase of 922,509, or 13.0%, since the year 2000. This includes an increase from net migration of 314,832 people into the Commonwealth from 2000 to 2007. Immigration from outside the United States resulted in a net increase of 159,627 people, and migration within the country produced a net increase of 155,205 people.",
     "link": "https://en.wikipedia.org/wiki/Demographics_of_Virginia"
   },
   {
-    "id": "Virginia",
-    "title": "Virginia",
-    "summary": "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. The state's capital is Richmond and its most populous city is Virginia Beach. Its most populous subdivision is Fairfax County, part of Northern Virginia, where slightly over a third of Virginia's population of more than 8.8 million live.\nEastern Virginia is part of the Atlantic Plain, and the Middle Peninsula forms the mouth of the Chesapeake Bay. Central Virginia lies predominantly in the Piedmont, the foothill region of the Blue Ridge Mountains, which cross the western and southwestern parts of the state.",
-    "link": "https://en.wikipedia.org/wiki/Virginia"
-  },
-  {
-    "id": "List of U.S. states and territories by population",
-    "title": "List of U.S. states and territories by population",
-    "summary": "The states and territories included in the United States Census Bureau's statistics for the United States population, ethnicity, and most other categories include the 50 states and Washington, D.C. Separate statistics are maintained for the five permanently inhabited territories of the United States: Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands.\nAs of April 1, 2020, the date of the 2020 United States census, the nine most populous U.S. states contain slightly more than half of the total population. The 25 least populous states contain less than one-sixth of the total population. California, the most populous state, contains more people than the 21 least populous states combined, and Wyoming, the least populous state, has a population less than any of the 31 most populous U.S. cities.\n\n\n== Method ==\nThe United States Census counts the persons residing in the United States including citizens, non-citizen permanent residents and non-citizen long-term visitors.",
-    "link": "https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population"
+    "id": "Greater Richmond Region",
+    "title": "Greater Richmond Region",
+    "summary": "The Greater Richmond Region, also known as the Richmond metropolitan area or Central Virginia, is a region and metropolitan area in the U.S. state of Virginia, centered on Richmond. The U.S. Office of Management and Budget (OMB) defines the area as the Richmond, VA Metropolitan Statistical Area, a metropolitan statistical area (MSA) used by the U.S. Census Bureau and other entities. The OMB defines the area as comprising 17 county-level jurisdictions, including the independent cities of Richmond, Petersburg, Hopewell, and Colonial Heights. As of 2020, it had a population of 1,314,434, making it the 44th largest MSA in the country.\nThe Greater Richmond Region is located in the central part of Virginia.",
+    "link": "https://en.wikipedia.org/wiki/Greater_Richmond_Region"
   },
   {
     "id": "Richmond, Virginia",
@@ -2541,10 +2534,22 @@ Length AFTER deduplicate: 34</code></pre>
     "link": "https://en.wikipedia.org/wiki/Richmond,_Virginia"
   },
   {
-    "id": "Greater Richmond Region",
-    "title": "Greater Richmond Region",
-    "summary": "The Greater Richmond Region, also known as the Richmond metropolitan area or Central Virginia, is a region and metropolitan area in the U.S. state of Virginia, centered on Richmond. The U.S. Office of Management and Budget (OMB) defines the area as the Richmond, VA Metropolitan Statistical Area, a metropolitan statistical area (MSA) used by the U.S. Census Bureau and other entities. The OMB defines the area as comprising 17 county-level jurisdictions, including the independent cities of Richmond, Petersburg, Hopewell, and Colonial Heights. As of 2020, it had a population of 1,314,434, making it the 44th largest MSA in the country.\nThe Greater Richmond Region is located in the central part of Virginia.",
-    "link": "https://en.wikipedia.org/wiki/Greater_Richmond_Region"
+    "id": "Virginia",
+    "title": "Virginia",
+    "summary": "Virginia, officially the Commonwealth of Virginia, is a state in the Southeastern and Mid-Atlantic regions of the United States between the Atlantic Coast and the Appalachian Mountains. The state's capital is Richmond and its most populous city is Virginia Beach. Its most populous subdivision is Fairfax County, part of Northern Virginia, where slightly over a third of Virginia's population of more than 8.8 million live.\nEastern Virginia is part of the Atlantic Plain, and the Middle Peninsula forms the mouth of the Chesapeake Bay. Central Virginia lies predominantly in the Piedmont, the foothill region of the Blue Ridge Mountains, which cross the western and southwestern parts of the state.",
+    "link": "https://en.wikipedia.org/wiki/Virginia"
+  },
+  {
+    "id": "List of United States cities by population",
+    "title": "List of United States cities by population",
+    "summary": "This is a list of the most populous municipal corporations of the United States. As defined by the United States Census Bureau, an incorporated place includes cities, towns, villages, boroughs, and municipalities. A few exceptional census-designated places (CDPs) are also included in the Census Bureau's listing of incorporated places. Consolidated city-counties represent a distinct type of government that includes the entire population of a county, or county equivalent. Some consolidated city-counties, however, include multiple incorporated places.",
+    "link": "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
+  },
+  {
+    "id": "List of U.S. states and territories by population",
+    "title": "List of U.S. states and territories by population",
+    "summary": "The states and territories included in the United States Census Bureau's statistics for the United States population, ethnicity, and most other categories include the 50 states and Washington, D.C. Separate statistics are maintained for the five permanently inhabited territories of the United States: Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands.\nAs of April 1, 2020, the date of the 2020 United States census, the nine most populous U.S. states contain slightly more than half of the total population. The 25 least populous states contain less than one-sixth of the total population. California, the most populous state, contains more people than the 21 least populous states combined, and Wyoming, the least populous state, has a population less than any of the 31 most populous U.S. cities.\n\n\n== Method ==\nThe United States Census counts the persons residing in the United States including citizens, non-citizen permanent residents and non-citizen long-term visitors.",
+    "link": "https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_population"
   },
   {
     "id": "List of cities and counties in Virginia",
@@ -2565,6 +2570,24 @@ Length AFTER deduplicate: 34</code></pre>
     "link": "https://en.wikipedia.org/wiki/List_of_Virginia_locations_by_per_capita_income"
   },
   {
+    "id": "List of U.S. states and territories by income",
+    "title": "List of U.S. states and territories by income",
+    "summary": "This has lists of U.S. states, territories, and Washington, D.C. by income. Data is from various sources, such as the Bureau of Labor Statistics and the yearly American Community Survey (ACS). Data is less frequent for American Samoa, Guam, the Northern Mariana Islands and the U.S. Virgin Islands.\nAverage or mean full-time wage in the United States was $80,115 in 2023. Median full-time wage in the U.S. was $48,060 in 2023.",
+    "link": "https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_income"
+  },
+  {
+    "id": "Population pyramid",
+    "title": "Population pyramid",
+    "summary": "A population pyramid (age structure diagram) or \"age-sex pyramid\" is a graphical illustration of the distribution of a population (typically that of a country or region of the world) by age groups and sex; it typically takes the shape of a pyramid when the population is growing. Males are usually shown on the left and females on the right, and they may be measured in absolute numbers or as a percentage of the total population. The pyramid can be used to visualize the age of a particular population. It is also used in ecology to determine the overall age distribution of a population; an indication of the reproductive capabilities and likelihood of the continuation of a species. Number of people per unit area of land is called population density.",
+    "link": "https://en.wikipedia.org/wiki/Population_pyramid"
+  },
+  {
+    "id": "Demographics of the United States",
+    "title": "Demographics of the United States",
+    "summary": "The United States is the third most populous country in the world, and the most populous in the Americas and the Western Hemisphere, with an estimated population of 340,110,988 on July 1, 2024, according to the U.S. Census Bureau. This was an increase of 2.6% over the 2020 federal census of 331,449,281 residents. These figures include the 50 states and the federal capital, Washington, D.C., but exclude the 3.6 million residents of five unincorporated U.S. territories (Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands) as well as several minor uninhabited island possessions. The Census Bureau showed a population increase of 0.98% for the twelve-month period ending in July 2024, slightly below the world estimated annual growth rate of 1.03%. By several metrics, including racial and ethnic background, religious affiliation, and percentage of rural and urban divide, the state of Illinois is the most representative of the larger demography of the United States.",
+    "link": "https://en.wikipedia.org/wiki/Demographics_of_the_United_States"
+  },
+  {
     "id": "List of states and territories of the United States by population density",
     "title": "List of states and territories of the United States by population density",
     "summary": "This is a list of the 50 states, the 5 territories, and the District of Columbia of the United States of America by population density, population size, and land area. It also includes a sortable table of density by states, territories, divisions, and regions by population rank and land area, and a sortable table for density by states, divisions, regions, and territories in square miles and square kilometers.\nThe population density of the United States is lower than that of many other countries because of the United States' large land area. There are large, sparsely populated areas in parts of the US, like the east-to-west stretch extending from the outskirts of Seattle all the way to Minneapolis, or the north-to-south portion from northern Montana to southern New Mexico, excluding Denver and Albuquerque. For comparison, the population density of the U.S. is 1/15 that of South Korea and 1/12 that of India and the Netherlands.",
@@ -2575,24 +2598,6 @@ Length AFTER deduplicate: 34</code></pre>
     "title": "Metropolitan statistical area",
     "summary": "In the United States, a metropolitan statistical area (MSA) is a geographical region with a relatively high population density at its core and close economic ties throughout the region. Such regions are not legally incorporated as a city or town would be and are not legal administrative divisions like counties or separate entities such as states. As a result, sometimes the precise definition of a given metropolitan area will vary between sources. The statistical criteria for a standard metropolitan area were defined in 1949 and redefined as a metropolitan statistical area in 1983.\nDue to suburbanization, the typical metropolitan area is polycentric rather than being centered around a large historic core city such as New York City or Chicago.",
     "link": "https://en.wikipedia.org/wiki/Metropolitan_statistical_area"
-  },
-  {
-    "id": "Population pyramid",
-    "title": "Population pyramid",
-    "summary": "A population pyramid (age structure diagram) or \"age-sex pyramid\" is a graphical illustration of the distribution of a population (typically that of a country or region of the world) by age groups and sex; it typically takes the shape of a pyramid when the population is growing. Males are usually shown on the left and females on the right, and they may be measured in absolute numbers or as a percentage of the total population. The pyramid can be used to visualize the age of a particular population. It is also used in ecology to determine the overall age distribution of a population; an indication of the reproductive capabilities and likelihood of the continuation of a species. Number of people per unit area of land is called population density.",
-    "link": "https://en.wikipedia.org/wiki/Population_pyramid"
-  },
-  {
-    "id": "List of U.S. states and territories by income",
-    "title": "List of U.S. states and territories by income",
-    "summary": "This has lists of U.S. states, territories, and Washington, D.C. by income. Data is from various sources, such as the Bureau of Labor Statistics and the yearly American Community Survey (ACS). Data is less frequent for American Samoa, Guam, the Northern Mariana Islands and the U.S. Virgin Islands.\nAverage or mean full-time wage in the United States was $80,115 in 2023. Median full-time wage in the U.S. was $48,060 in 2023.",
-    "link": "https://en.wikipedia.org/wiki/List_of_U.S._states_and_territories_by_income"
-  },
-  {
-    "id": "Demographics of the United States",
-    "title": "Demographics of the United States",
-    "summary": "The United States is the third most populous country in the world, and the most populous in the Americas and the Western Hemisphere, with an estimated population of 340,110,988 on July 1, 2024, according to the U.S. Census Bureau. This was an increase of 2.6% over the 2020 federal census of 331,449,281 residents. These figures include the 50 states and the federal capital, Washington, D.C., but exclude the 3.6 million residents of five unincorporated U.S. territories (Puerto Rico, Guam, the U.S. Virgin Islands, American Samoa, and the Northern Mariana Islands) as well as several minor uninhabited island possessions. The Census Bureau showed a population increase of 0.98% for the twelve-month period ending in July 2024, slightly below the world estimated annual growth rate of 1.03%. By several metrics, including racial and ethnic background, religious affiliation, and percentage of rural and urban divide, the state of Illinois is the most representative of the larger demography of the United States.",
-    "link": "https://en.wikipedia.org/wiki/Demographics_of_the_United_States"
   }
 ]
 --------------
@@ -2605,7 +2610,7 @@ what's the population of richmond virgnia?</code></pre>
 </section>
 <section id="the-answer-expecting-226610-as-of-2020-census" class="slide level2">
 <h2>The answer (expecting: 226,610 as of 2020 census)</h2>
-<div id="3c1ad78e" class="cell" data-execution_count="55">
+<div id="d894c2ed" class="cell" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href=""></a>out <span class="op">=</span> g <span class="op">+</span> prompt <span class="op">+</span> get_q_and_a_grammar(name<span class="op">=</span><span class="st">'answer'</span>)</span>
 <span id="cb75-2"><a href=""></a><span class="bu">print</span>(out[<span class="st">'answer'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2616,7 +2621,7 @@ what's the population of richmond virgnia?</code></pre>
 </div>
 <p><br></p>
 <div class="fragment">
-<div id="83e55a86" class="cell" data-execution_count="56">
+<div id="ce38e5f8" class="cell" data-execution_count="56">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href=""></a>no_ctx_answer <span class="op">=</span> g <span class="op">+</span> user_query <span class="op">+</span> get_q_and_a_grammar(name<span class="op">=</span><span class="st">'no_ctx_answer'</span>)</span>
 <span id="cb77-2"><a href=""></a><span class="bu">print</span>(no_ctx_answer[<span class="st">'no_ctx_answer'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -2663,7 +2668,7 @@ what's the population of richmond virgnia?</code></pre>
 <p><a href="https://github.com/guidance-ai/guidance">Example straight from their README</a></p>
 </blockquote>
 <div class="column" style="width:45%;">
-<div id="c87b4667" class="cell" data-execution_count="57">
+<div id="65f81d07" class="cell" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb79" data-code-line-numbers="3-4|8-9|13-14|18-19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href=""></a><span class="im">import</span> guidance</span>
 <span id="cb79-2"><a href=""></a></span>
 <span id="cb79-3"><a href=""></a><span class="at">@guidance</span></span>
@@ -2689,7 +2694,7 @@ what's the population of richmond virgnia?</code></pre>
 </div><div class="column" style="width:10%;">
 <p><br></p>
 </div><div class="column fragment" style="width:45%;">
-<div id="b394604a" class="cell" data-execution_count="58">
+<div id="420164ec" class="cell" data-execution_count="58">
 <div class="sourceCode cell-code" id="cb80" data-code-line-numbers="1-4|5-9|10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href=""></a>o <span class="op">=</span> g <span class="op">+</span> <span class="st">'''</span><span class="op">\</span></span>
 <span id="cb80-2"><a href=""></a><span class="st">1 + 1 = add(1, 1) = 2</span></span>
 <span id="cb80-3"><a href=""></a><span class="st">2 - 3 = subtract(2, 3) = -1</span></span>
@@ -2833,7 +2838,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 </section>
 <section id="example-as-a-library-fibonacci-sequence" class="slide level2">
 <h2>Example as a library: Fibonacci Sequence</h2>
-<div id="4957bc56" class="cell" data-execution_count="60">
+<div id="694bff83" class="cell" data-execution_count="60">
 <div class="sourceCode cell-code" id="cb84" data-code-line-numbers="1-17|5-8|5-7|10-13|11-12|13|15-17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href=""></a><span class="im">from</span> smolagents <span class="im">import</span> CodeAgent, LiteLLMModel</span>
 <span id="cb84-2"><a href=""></a><span class="im">from</span> smolagents <span class="im">import</span> WebSearchTool</span>
 <span id="cb84-3"><a href=""></a></span>
@@ -2960,7 +2965,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Scan Host Tool <span class="emoji" data-emoji="dart">🎯</span></a></li><li><a href="#tabset-3-2">Software Vuln Search Tool <span class="emoji" data-emoji="closed_book">📕</span></a></li><li><a href="#tabset-3-3">Retrieve Vuln Details Tool <span class="emoji" data-emoji="microscope">🔬</span></a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div id="6168ddb9" class="cell" data-execution_count="62">
+<div id="c284f106" class="cell" data-execution_count="62">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="54">
 <div class="sourceCode" id="cb86"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb86-1"><a href=""></a><span class="kw">class</span> ScanHostTool(Tool):</span>
 <span id="cb86-2"><a href=""></a>    name <span class="op">=</span> <span class="st">"scan_host_tool"</span></span>
@@ -2991,7 +2996,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 </div>
 </div>
 <div id="tabset-3-2">
-<div id="1febaf3d" class="cell" data-execution_count="63">
+<div id="9b8a9599" class="cell" data-execution_count="63">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="55">
 <div class="sourceCode" id="cb87"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb87-1"><a href=""></a><span class="kw">class</span> SoftwareVulnerabilitySearchTool(Tool):</span>
 <span id="cb87-2"><a href=""></a>    name <span class="op">=</span> <span class="st">"sofwate_vulnerability_search_tool"</span></span>
@@ -3011,7 +3016,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 </div>
 </div>
 <div id="tabset-3-3">
-<div id="5f9bfa7b" class="cell" data-execution_count="64">
+<div id="04d46af2" class="cell" data-execution_count="64">
 <div class="cell-output cell-output-display cell-output-markdown" data-execution_count="56">
 <div class="sourceCode" id="cb88"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb88-1"><a href=""></a><span class="kw">class</span> RetrieveVulnerabilityDetailsTool(Tool):</span>
 <span id="cb88-2"><a href=""></a>    name <span class="op">=</span> <span class="st">"retrieve_vulnerability_details_tool"</span></span>
@@ -3208,7 +3213,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 </div>
 <div class="fragment">
 <h4 id="define-a-server">Define a server</h4>
-<div id="f51a36d4" class="cell" data-execution_count="65">
+<div id="e2084bcb" class="cell" data-execution_count="65">
 <div class="sourceCode cell-code" id="cb91" data-code-line-numbers="1|2-3|6-20|24-30"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb91-1" class="hljs-ln-code"><a href=""></a><span class="im">import</span> gradio <span class="im">as</span> gr  <span class="co"># HuggingFace ML UI library</span></span>
 <span id="cb91-2" class="hljs-ln-code"><a href=""></a><span class="co"># Our vuln assistant</span></span>
 <span id="cb91-3" class="hljs-ln-code"><a href=""></a><span class="im">from</span> smolagents_sploit_assistant <span class="im">import</span> SoftwareVulnerabilitySearchTool</span>
@@ -3272,7 +3277,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 <section id="mcp-ify-our-vuln-search-tool-2" class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title"><strong>MCP</strong>-<em>ify</em> our Vuln Search Tool</h2>
 <h4 id="run-an-agent">Run an agent</h4>
-<div id="ba469001" class="cell" data-execution_count="66">
+<div id="178d9e3f" class="cell" data-execution_count="66">
 <div class="sourceCode cell-code" id="cb92" data-code-line-numbers="1|10-11|1-26"><pre class="sourceCode numberSource python number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode python hljs"><span id="cb92-1" class="hljs-ln-code"><a href=""></a><span class="im">from</span> smolagents.mcp_client <span class="im">import</span> MCPClient</span>
 <span id="cb92-2" class="hljs-ln-code"><a href=""></a></span>
 <span id="cb92-3" class="hljs-ln-code"><a href=""></a><span class="im">from</span> smolagents <span class="im">import</span> LiteLLMModel, CodeAgent</span>
@@ -3520,11 +3525,30 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 <p>Thank you! <span class="emoji" data-emoji="beers">🍻</span> <br> Happy Hacking! <span class="emoji" data-emoji="penguin">🐧</span></p>
 </div>
 </section></section>
+<section>
 <section id="extras" class="title-slide slide level1 center">
 <h1>Extras</h1>
 
 </section>
-
+<section id="nists-big-list-of-genai-risks-risks" class="slide level2 smaller">
+<h2>NIST’s big list of GenAI risks Risks</h2>
+<div class="fragment" style="font-size: 150%">
+<ol type="1">
+<li class="fragment"><strong>CBRN Information or Capabilities</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>Prompting for warfare</em></span></li>
+<li class="fragment"><strong>Confabulations</strong>: <span class="fragment fade-in" style="color: #11ad18"><em>Just makes stuff up</em></span></li>
+<li class="fragment"><strong>Dangerous, Violent, or Hate Content</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>Plenty of that already…</em></span></li>
+<li class="fragment"><strong>Data Privacy</strong>: <span class="fragment fade-in" style="color: #11ad18"><em>New topics here -Data leakage and disclosures</em></span></li>
+<li class="fragment"><strong>Environmental Impacts</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>lighting emoji</em></span></li>
+<li class="fragment"><strong>Harmful Bias or Homogenization</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>Diversity has utility</em></span></li>
+<li class="fragment"><strong>Human-AI Configuration</strong>: <span class="fragment fade-in" style="color: #11ad18"><em>Yea, like the movie <code>Her</code> - social engineering</em></span></li>
+<li class="fragment"><strong>Information Integrity</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>Big uh-ohs here</em></span></li>
+<li class="fragment"><strong>Information Security</strong>: <span class="fragment fade-in" style="color: #11ad18"><em>OSInt and CVE Blender - we’ll make one</em></span></li>
+<li class="fragment"><strong>Intellectual Property</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>Keys and licenses float around on line</em></span></li>
+<li class="fragment"><strong>Obscene, Degraded, and/or Abusive Content</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>CSAM and NCII</em></span></li>
+<li class="fragment"><strong>Value Chain and Component Integrations</strong>: <span class="fragment fade-in" style="color: #4c9aac"><em>Garbage in, gabage out</em></span></li>
+</ol>
+</div>
+</section></section>
 <section id="speculative-risks" class="title-slide slide level1 center">
 <h1>“Speculative” Risks</h1>
 <div class="fragment">
@@ -3694,7 +3718,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 </section>
 <section id="can-also-download-models-from-llama-cpp-python" class="slide level2">
 <h2>Can also download models from llama-cpp-python</h2>
-<div id="cf0d51c5" class="cell" data-execution_count="67">
+<div id="6ae4baef" class="cell" data-execution_count="67">
 <div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb98-1"><a href=""></a>llm <span class="op">=</span> Llama.from_pretrained(</span>
 <span id="cb98-2"><a href=""></a>    repo_id<span class="op">=</span><span class="st">"Qwen/Qwen2-0.5B-Instruct-GGUF"</span>,</span>
 <span id="cb98-3"><a href=""></a>    filename<span class="op">=</span><span class="st">"*q8_0.gguf"</span>,</span>
@@ -3704,7 +3728,7 @@ https://github.com/huggingface/smolagents/tree/main/examples/open_deep_research
 </section>
 <section id="smolvlm" class="slide level2">
 <h2>SmolVLM</h2>
-<div id="1b3813ef" class="cell" data-execution_count="68">
+<div id="8ae42e53" class="cell" data-execution_count="68">
 <div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb99-1"><a href=""></a><span class="co">#TODO</span></span>
 <span id="cb99-2"><a href=""></a><span class="im">from</span> transformers <span class="im">import</span> AutoProcessor, AutoModelForVision2Seq</span>
 <span id="cb99-3"><a href=""></a><span class="im">from</span> transformers.image_utils <span class="im">import</span> load_image</span>
