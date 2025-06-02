@@ -5,5 +5,4 @@ format:
     minimal: true
 ---
 
-Offering data science and computer engineering services since 2017.
-
+Offering data science and computer engineering services since 2017. Email morgansstuart243 (at gmail) for inquireies - thank you!
