@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1073.6633mm"
+   height="608.09027mm"
+   viewBox="0 0 1073.6634 608.0903"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="prompt_injection_risk_flo__adapted_from_tjhack_pipe.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.25034246"
+     inkscape:cx="1877.4282"
+     inkscape:cy="776.93573"
+     inkscape:window-width="1808"
+     inkscape:window-height="1382"
+     inkscape:window-x="2256"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="348.83292"
+       height="218.90324"
+       id="rect2" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="473.11346"
+       height="419.44687"
+       id="rect2-9" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="470.28891"
+       height="571.97302"
+       id="rect2-9-8" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="470.28891"
+       height="571.97302"
+       id="rect2-9-8-0" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="470.28891"
+       height="297.99088"
+       id="rect2-6" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="470.28891"
+       height="297.99088"
+       id="rect2-6-9" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="613.89117"
+       height="404.23727"
+       id="rect2-6-9-1" />
+    <rect
+       x="220.31552"
+       y="477.35031"
+       width="470.28891"
+       height="297.99088"
+       id="rect2-6-9-14" />
+    <marker
+       style="overflow:visible"
+       id="Triangle-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-7-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-0-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-7-9-2"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-0-6-0" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(164.57502,-16.039438)">
+    <rect
+       style="fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:3.79419;stroke-opacity:0.670507"
+       id="rect1"
+       width="86.246971"
+       height="86.246971"
+       x="80.003685"
+       y="-36.782173"
+       rx="0"
+       ry="54.347408"
+       transform="rotate(45)" />
+    <rect
+       style="fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:5.07691;stroke-opacity:0.670507"
+       id="rect1-6"
+       width="115.40481"
+       height="115.40481"
+       x="223.9379"
+       y="-192.90044"
+       rx="0"
+       ry="0"
+       transform="matrix(0.7863047,0.61783891,-0.7863047,0.61783891,0,0)" />
+    <rect
+       style="fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:5.22108;stroke-opacity:0.670507"
+       id="rect1-6-9"
+       width="118.68188"
+       height="118.68188"
+       x="400.44455"
+       y="-354.35165"
+       rx="0"
+       ry="0"
+       transform="matrix(0.7863047,0.61783891,-0.7863047,0.61783891,0,0)" />
+    <rect
+       style="fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:4.50631;stroke-opacity:0.670507"
+       id="rect1-6-8-2"
+       width="162.79091"
+       height="162.79091"
+       x="513.93243"
+       y="-35.251793"
+       rx="0"
+       ry="0"
+       transform="matrix(0.83545516,0.54955862,-0.83545516,0.54955862,0,0)" />
+    <rect
+       style="fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:5.19237;stroke-opacity:0.670507"
+       id="rect1-6-8-2-9"
+       width="118.02959"
+       height="118.02959"
+       x="297.05261"
+       y="184.54172"
+       rx="0"
+       ry="0"
+       transform="matrix(0.80652827,0.59119552,-0.80652827,0.59119552,0,0)" />
+    <rect
+       style="fill:#ffffff;fill-opacity:0.504;stroke:#000000;stroke-width:1.2;stroke-opacity:0.670507"
+       id="rect3"
+       width="126.29893"
+       height="103.04744"
+       x="-163.97502"
+       y="35.849888" />
+    <rect
+       style="fill:#1ed36a;fill-opacity:0.504;stroke:#000000;stroke-width:1.34921;stroke-opacity:0.670507"
+       id="rect3-3"
+       width="142.00301"
+       height="142.00301"
+       x="24.685061"
+       y="481.45212" />
+    <rect
+       style="fill:#da1e44;fill-opacity:0.557841;stroke:#000000;stroke-width:1.2;stroke-opacity:0.670507"
+       id="rect3-3-4"
+       width="126.29893"
+       height="126.29893"
+       x="782.18939"
+       y="31.418087" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-10.462634,-58.291815)"
+       id="text1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan1">Who can </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan3">access the </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan4">LLM tool?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-25.403643,204.0618)"
+       id="text1-7"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-6);display:inline;fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan5">Does the feature </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan6">consume any </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan7">external input?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,212.22746,-56.810417)"
+       id="text1-7-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-6-9);display:inline;fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan8">Will the feature </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan9">require access </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan10">to user data?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,485.17577,-50.954442)"
+       id="text1-7-0-0"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-6-9-14);display:inline;fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan11">For the feature </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan12">to function, </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan13">whose data is </tspan><tspan
+         x="220.31641"
+         y="700.05893"
+         id="tspan14">required?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,325.82293,186.57205)"
+       id="text1-7-0-1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-6-9-1);display:inline;fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan15">Can the feature tak </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan16">state-changing </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan17">actions, out-of-bound </tspan><tspan
+         x="220.31641"
+         y="700.05893"
+         id="tspan18">requests, or access </tspan><tspan
+         x="220.31641"
+         y="760.05893"
+         id="tspan19">internal-only data?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-218.17882,-77.375537)"
+       id="text1-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-9);display:inline;fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan20">Do I need to </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan21">worry about </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan22">prompt injection </tspan><tspan
+         x="220.31641"
+         y="700.05893"
+         id="tspan23">in my LLM-based </tspan><tspan
+         x="220.31641"
+         y="760.05893"
+         id="tspan24">app or feature?</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-21.167603,354.48364)"
+       id="text1-6-6"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-9-8);display:inline;fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan25">No Significant </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan26">Impact from </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan27">Prompt Injection </tspan><tspan
+         x="220.31641"
+         y="700.05893"
+         id="tspan28">other than </tspan><tspan
+         x="220.31641"
+         y="760.05893"
+         id="tspan29">Normal </tspan><tspan
+         x="220.31641"
+         y="820.05893"
+         id="tspan30">Jailbraking and </tspan><tspan
+         x="220.31641"
+         y="880.05893"
+         id="tspan31">Usage Concerns </tspan><tspan
+         x="220.31641"
+         y="940.05893"
+         id="tspan32">(Health and </tspan><tspan
+         x="220.31641"
+         y="1000.0589"
+         id="tspan33">Safety Issues)</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,727.49484,-89.766309)"
+       id="text1-6-6-2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:48px;font-family:'Liberation Mono';-inkscape-font-specification:'Liberation Mono, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2-9-8-0);display:inline;fill:#e4eefb;fill-opacity:0.504;stroke:#000000;stroke-width:4.53543;stroke-opacity:0.670507"><tspan
+         x="220.31641"
+         y="520.05893"
+         id="tspan34">Insecure to </tspan><tspan
+         x="220.31641"
+         y="580.05893"
+         id="tspan35">Propmt Injection </tspan><tspan
+         x="220.31641"
+         y="640.05893"
+         id="tspan36">for Security </tspan><tspan
+         x="220.31641"
+         y="700.05893"
+         id="tspan37">Purposes</tspan></text>
+    <path
+       style="fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:0.670507;marker-end:url(#Triangle)"
+       d="M -34.977216,90.574382 H 16.58862"
+       id="path3" />
+    <path
+       style="fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:0.670507;marker-end:url(#Triangle-7)"
+       d="m 172.26409,90.162443 h 51.56583"
+       id="path3-0" />
+    <path
+       style="fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:0.670507;marker-end:url(#Triangle-7-9)"
+       d="m 438.68823,98.581326 h 51.56583"
+       id="path3-0-4" />
+    <path
+       style="fill:#e4eefb;fill-opacity:0.48072;stroke:#000000;stroke-width:2;stroke-dasharray:none;stroke-opacity:0.670507;marker-end:url(#Triangle-7-9-2)"
+       d="m 712.4901,94.384197 h 51.56583"
+       id="path3-0-4-2" />
+  </g>
+</svg>
